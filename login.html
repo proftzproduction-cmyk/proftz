@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Sign in to your PROFTZ account to access your 12-Slot FLOW Engine, USDT earnings, and Web3 dashboard.">
+    <title>Login - PROFTZ FLOW Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+    <header class="main-header" role="banner">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="index.html" class="back-home-link" aria-label="Back to Home">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Back to Home</span>
+                </a>
+            </div>
+            <div class="header-center">
+                <a href="index.html">
+                    <img src="public/logo.webp" alt="Proftz Logo" class="logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="menu-btn" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="login-container">
+        <img src="public/design overlay.png" class="hero-design-overlay" alt="Design Overlay">
+        <img src="public/globe.png" class="hero-globe login-globe" alt="Network Globe">
+
+        <div class="login-card">
+            <div class="flare top-left"></div>
+            <div class="flare top-right"></div>
+            <div class="flare bottom-left"></div>
+            <div class="flare bottom-right"></div>
+
+            <div class="login-card-header">
+                <div class="login-badge">
+                    <span>WEB3 AUTHENTICATION</span>
+                </div>
+                <h1 class="login-title">Sign In to <span class="highlight">PROFTZ</span></h1>
+                <p class="login-subtitle">Access your 12-Slot FLOW Engine & live USDT matrix dashboard</p>
+            </div>
+
+            <!-- Auth Mode Switcher -->
+            <div class="auth-tabs" role="tablist">
+                <button type="button" class="tab-btn active" id="tab-web3" role="tab" aria-selected="true" onclick="switchAuthTab('web3')">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
+                        <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path>
+                        <path d="M18 12a2 2 0 0 0 0 4h4v-4z"></path>
+                    </svg>
+                    <span>Web3 Wallet</span>
+                </button>
+                <button type="button" class="tab-btn" id="tab-credentials" role="tab" aria-selected="false" onclick="switchAuthTab('credentials')">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>Member Credentials</span>
+                </button>
+            </div>
+
+            <!-- Web3 Wallet Panel -->
+            <div class="auth-panel active" id="panel-web3">
+                <div class="wallet-options">
+                    <button type="button" class="wallet-btn metamask-btn">
+                        <div class="wallet-icon-box">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#f6851b" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="wallet-text">
+                            <span class="wallet-name">MetaMask</span>
+                            <span class="wallet-desc">Connect with MetaMask browser extension or app</span>
+                        </div>
+                        <span class="wallet-arrow">&rarr;</span>
+                    </button>
+
+                    <button type="button" class="wallet-btn walletconnect-btn">
+                        <div class="wallet-icon-box">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3b99fc" stroke-width="2">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M8 12l3 3 5-5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="wallet-text">
+                            <span class="wallet-name">WalletConnect</span>
+                            <span class="wallet-desc">Scan with Trust Wallet, Rainbow, or 100+ mobile wallets</span>
+                        </div>
+                        <span class="wallet-arrow">&rarr;</span>
+                    </button>
+
+                    <button type="button" class="wallet-btn trustwallet-btn">
+                        <div class="wallet-icon-box">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#0500ff" stroke-width="2">
+                                <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="wallet-text">
+                            <span class="wallet-name">Trust Wallet</span>
+                            <span class="wallet-desc">Connect securely via Trust Wallet app</span>
+                        </div>
+                        <span class="wallet-arrow">&rarr;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Member Credentials Form Panel -->
+            <div class="auth-panel" id="panel-credentials">
+                <form class="login-form" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="username" class="form-label">Member ID / Email</label>
+                        <div class="input-wrapper">
+                            <div class="input-icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4ce629" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <input type="text" id="username" name="username" class="form-input" placeholder="Enter your Member ID or Email" required autocomplete="username">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="password" class="form-label">Security Password</label>
+                            <a href="#" class="forgot-link">Forgot Password?</a>
+                        </div>
+                        <div class="input-wrapper">
+                            <div class="input-icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4ce629" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
+                            <button type="button" class="toggle-password" onclick="togglePasswordVisibility()" aria-label="Toggle password visibility">
+                                <svg id="eye-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#a0a5a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="remember" checked>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-label">Keep me logged in on this device</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary submit-btn">
+                        <span>Sign In to FLOW Engine</span>
+                        <span class="btn-arrow">&rarr;</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="login-card-footer">
+                <p>Don't have an IBP account yet? <a href="#" class="register-link">Register New Account &rarr;</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function switchAuthTab(tab) {
+            const tabWeb3 = document.getElementById('tab-web3');
+            const tabCreds = document.getElementById('tab-credentials');
+            const panelWeb3 = document.getElementById('panel-web3');
+            const panelCreds = document.getElementById('panel-credentials');
+
+            if (tab === 'web3') {
+                tabWeb3.classList.add('active');
+                tabWeb3.setAttribute('aria-selected', 'true');
+                tabCreds.classList.remove('active');
+                tabCreds.setAttribute('aria-selected', 'false');
+
+                panelWeb3.classList.add('active');
+                panelCreds.classList.remove('active');
+            } else {
+                tabCreds.classList.add('active');
+                tabCreds.setAttribute('aria-selected', 'true');
+                tabWeb3.classList.remove('active');
+                tabWeb3.setAttribute('aria-selected', 'false');
+
+                panelCreds.classList.add('active');
+                panelWeb3.classList.remove('active');
+            }
+        }
+
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('eye-icon');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.setAttribute('stroke', '#5ded37');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.setAttribute('stroke', '#a0a5a8');
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const btn = document.querySelector('.submit-btn');
+            btn.innerHTML = '<span>Authenticating...</span>';
+            setTimeout(() => {
+                alert('Authentication successful! Redirecting to PROFTZ Dashboard...');
+                window.location.href = 'index.html';
+            }, 1200);
+        }
+    </script>
+</body>
+</html>

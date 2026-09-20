@@ -734,3 +734,394 @@ body {
     .stat-value { font-size: 16px; }
     .stat-label { font-size: 9px; }
 }
+
+/* ==========================================================================
+   LOGIN PAGE STYLES
+   ========================================================================== */
+.back-home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #c89551;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-home-link:hover {
+    color: #ffffff;
+    transform: translateX(-3px);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 80px 20px;
+    min-height: calc(100vh - 180px);
+    position: relative;
+    z-index: 1;
+}
+
+.login-globe {
+    left: -180px;
+    top: 50%;
+    opacity: 0.45;
+}
+
+.login-card {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    background: linear-gradient(180deg, #141c20 0%, #080d0e 100%) padding-box,
+                linear-gradient(135deg, rgba(210, 121, 49, 0.3) 0%, rgba(255, 220, 170, 0.9) 20%, rgba(210, 121, 49, 0.35) 45%, rgba(255, 235, 195, 0.95) 70%, rgba(210, 121, 49, 0.3) 100%) border-box;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 36px 30px;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.95), inset 0 1px 2px rgba(255, 220, 170, 0.3);
+    z-index: 2;
+}
+
+.login-card-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.login-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border: 1px solid rgba(210, 121, 49, 0.4);
+    background: rgba(12, 24, 14, 0.6);
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #c89551;
+    margin-bottom: 14px;
+}
+
+.login-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.login-title .highlight {
+    color: #5ded37;
+    background: linear-gradient(180deg, #8BEA3C 0%, #238B22 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-subtitle {
+    font-size: 13px;
+    color: #a0a5a8;
+    line-height: 1.4;
+}
+
+/* Auth Mode Tabs */
+.auth-tabs {
+    display: flex;
+    gap: 6px;
+    background: #0a1114;
+    padding: 5px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 24px;
+}
+
+.tab-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #a0a5a8;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tab-btn.active {
+    background: linear-gradient(180deg, #1d292e 0%, #111a1e 100%);
+    color: #5ded37;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Auth Panels */
+.auth-panel {
+    display: none;
+}
+
+.auth-panel.active {
+    display: block;
+    animation: fadeInPanel 0.3s ease-out forwards;
+}
+
+@keyframes fadeInPanel {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Wallet Options */
+.wallet-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wallet-btn {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    background: linear-gradient(180deg, #10191c 0%, #080f11 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+}
+
+.wallet-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(93, 237, 55, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(93, 237, 55, 0.15);
+}
+
+.wallet-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #091012;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14px;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.wallet-text {
+    flex: 1;
+}
+
+.wallet-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.wallet-desc {
+    display: block;
+    font-size: 11px;
+    color: #8a9094;
+}
+
+.wallet-arrow {
+    font-size: 16px;
+    color: #5ded37;
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+.wallet-btn:hover .wallet-arrow {
+    transform: translateX(3px);
+}
+
+/* Credentials Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #d5d9d8;
+}
+
+.forgot-link {
+    font-size: 12px;
+    color: #c89551;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+    color: #5ded37;
+    text-decoration: underline;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.form-input {
+    width: 100%;
+    padding: 13px 14px 13px 44px;
+    background: #091012;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input::placeholder {
+    color: #60686d;
+}
+
+.form-input:focus {
+    border-color: #5ded37;
+    box-shadow: 0 0 12px rgba(93, 237, 55, 0.25);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-options {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+    color: #a0a5a8;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    background-color: #091012;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #1f7a1e;
+    border-color: #5ded37;
+}
+
+.checkmark::after {
+    content: "";
+    display: none;
+    width: 5px;
+    height: 9px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+    display: block;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px 20px;
+    font-size: 15px;
+    gap: 8px;
+}
+
+.login-card-footer {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 13px;
+    color: #a0a5a8;
+}
+
+.register-link {
+    color: #5ded37;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.register-link:hover {
+    color: #8bea3c;
+    text-decoration: underline;
+}
+
+/* Mobile Responsive Login */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 15px 12px 40px 12px;
+    }
+    .login-card {
+        padding: 24px 18px;
+        border-radius: 16px;
+    }
+    .login-title {
+        font-size: 22px;
+    }
+    .back-home-link span {
+        display: none;
+    }
+}
