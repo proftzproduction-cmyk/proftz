@@ -269,136 +269,63 @@ body {
     overflow: visible;
 }
 
-/* Futuristic High-Frequency Live Market Orderflow Scanner Animation */
+/* Normal Realistic Live Trading Chart Animation */
 .candle-group {
-    animation: candleSprout 8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    opacity: 1;
 }
 
-.candle-group.c1  { animation-delay: 0s; }
-.candle-group.c2  { animation-delay: 0.4s; }
-.candle-group.c3  { animation-delay: 0.8s; }
-.candle-group.c4  { animation-delay: 1.2s; }
-.candle-group.c5  { animation-delay: 1.6s; }
-.candle-group.c6  { animation-delay: 2.0s; }
-.candle-group.c7  { animation-delay: 2.4s; }
-.candle-group.c8  { animation-delay: 2.8s; }
-.candle-group.c9  { animation-delay: 3.2s; }
-.candle-group.c10 { animation-delay: 3.6s; }
+/* Active Live Candle Fluctuation */
+.candle-group.c10.live-candle {
+    animation: normalTradeCandle 4s ease-in-out infinite alternate;
+    transform-origin: 395px 85px;
+}
 
-@keyframes candleSprout {
+@keyframes normalTradeCandle {
     0% {
-        opacity: 0.15;
-        transform: scaleY(0.1);
-        transform-origin: center bottom;
+        transform: translateY(0px) scaleY(1);
+        filter: drop-shadow(0 0 6px rgba(76, 230, 41, 0.4));
     }
-    12% {
-        opacity: 1;
-        transform: scaleY(1.2);
-        transform-origin: center bottom;
-        filter: brightness(2) drop-shadow(0 0 16px rgba(76, 230, 41, 0.9));
-    }
-    25%, 80% {
-        opacity: 1;
-        transform: scaleY(1);
-        transform-origin: center bottom;
-        filter: brightness(1);
-    }
-    95%, 100% {
-        opacity: 0.15;
-        transform: scaleY(0.1);
-        transform-origin: center bottom;
-    }
-}
-
-.candle-group.red-candle {
-    animation-name: redCandleSprout;
-}
-
-@keyframes redCandleSprout {
-    0% {
-        opacity: 0.15;
-        transform: scaleY(0.1);
-        transform-origin: center top;
-    }
-    12% {
-        opacity: 1;
-        transform: scaleY(1.2);
-        transform-origin: center top;
-        filter: brightness(2) drop-shadow(0 0 16px rgba(255, 77, 77, 0.9));
-    }
-    25%, 80% {
-        opacity: 1;
-        transform: scaleY(1);
-        transform-origin: center top;
-        filter: brightness(1);
-    }
-    95%, 100% {
-        opacity: 0.15;
-        transform: scaleY(0.1);
-        transform-origin: center top;
-    }
-}
-
-.animated-trend-line {
-    stroke-dasharray: 700;
-    stroke-dashoffset: 700;
-    animation: laserFlowPath 8s linear infinite;
-}
-
-@keyframes laserFlowPath {
-    0% {
-        stroke-dashoffset: 700;
-        opacity: 0.2;
-    }
-    15% {
-        opacity: 1;
-        filter: drop-shadow(0 0 18px rgba(76, 230, 41, 1));
+    40% {
+        transform: translateY(-5px) scaleY(1.1);
+        filter: drop-shadow(0 0 12px rgba(76, 230, 41, 0.7));
     }
     75% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-        filter: drop-shadow(0 0 12px rgba(76, 230, 41, 0.8));
+        transform: translateY(-12px) scaleY(1.25);
+        filter: drop-shadow(0 0 18px rgba(76, 230, 41, 0.9));
     }
-    90%, 100% {
-        stroke-dashoffset: -700;
-        opacity: 0.2;
+    100% {
+        transform: translateY(-8px) scaleY(1.16);
+        filter: drop-shadow(0 0 10px rgba(76, 230, 41, 0.6));
     }
 }
 
+/* Live Price Line & Badge Sync */
 .live-price-group {
-    animation: livePriceScanner 8s linear infinite;
+    animation: normalTradePrice 4s ease-in-out infinite alternate;
 }
 
-@keyframes livePriceScanner {
+@keyframes normalTradePrice {
     0% {
-        opacity: 0;
-        transform: translateY(160px);
-    }
-    15% {
-        opacity: 1;
-        transform: translateY(160px);
-    }
-    35% {
-        transform: translateY(115px);
-    }
-    55% {
-        transform: translateY(70px);
-    }
-    75% {
-        transform: translateY(10px);
-    }
-    85%, 100% {
-        opacity: 1;
         transform: translateY(0px);
     }
+    40% {
+        transform: translateY(-5px);
+    }
+    75% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
 }
 
+/* Price Ping Beacon Ripple */
 .price-ping-ring {
-    animation: pricePingPulse 1.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    animation: pricePingRipple 1.8s cubic-bezier(0, 0.2, 0.8, 1) infinite;
     transform-origin: 395px 35px;
 }
 
-@keyframes pricePingPulse {
+@keyframes pricePingRipple {
     0% {
         r: 3px;
         opacity: 1;
@@ -408,6 +335,20 @@ body {
         r: 16px;
         opacity: 0;
         stroke-width: 0.5px;
+    }
+}
+
+/* Subtle Trend Line Glow */
+.animated-trend-line {
+    animation: normalTrendGlow 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes normalTrendGlow {
+    0% {
+        filter: drop-shadow(0 0 4px rgba(76, 230, 41, 0.4));
+    }
+    100% {
+        filter: drop-shadow(0 0 14px rgba(76, 230, 41, 0.85));
     }
 }
 
