@@ -1241,19 +1241,354 @@ body {
     text-decoration: underline;
 }
 
-/* Mobile Responsive Login */
+/* Step 1 Dedicated Form Styles */
+.step-top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.step-main-heading {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+.signin-instead-link {
+    color: #c89551;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.signin-instead-link:hover {
+    color: #5ded37;
+    text-decoration: underline;
+}
+
+.form-label-caps {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #d5d9d8;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.form-input-bordered {
+    width: 100%;
+    padding: 13px 16px;
+    background: #091012;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input-bordered:focus {
+    border-color: #5ded37;
+    box-shadow: 0 0 12px rgba(93, 237, 55, 0.25);
+}
+
+/* Token Selector Row */
+.token-selector-row {
+    display: flex;
+    gap: 12px;
+}
+
+.token-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 18px;
+    background: #0b1316;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.token-btn.active {
+    background: linear-gradient(180deg, #102613 0%, #0a180c 100%);
+    border: 1.5px solid #5ded37;
+    box-shadow: 0 0 16px rgba(93, 237, 55, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.token-logo {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.usdt-logo {
+    background: #26a17b;
+    color: #ffffff;
+}
+
+.usdc-logo {
+    background: #2775ca;
+    color: #ffffff;
+}
+
+/* Section Divider */
+.ibp-details-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 28px 0 20px 0;
+}
+
+.divider-line-left, .divider-line-right {
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(210, 121, 49, 0.7), transparent);
+}
+
+.divider-label {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #e2a868;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Package Grid */
+.package-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.package-box {
+    background: linear-gradient(180deg, #10181b 0%, #080e10 100%);
+    border: 1.5px solid rgba(210, 121, 49, 0.45);
+    border-radius: 14px;
+    padding: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-box.active {
+    border-color: #d3833b;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9), 0 0 16px rgba(210, 121, 49, 0.35);
+}
+
+.package-box:hover {
+    transform: translateY(-2px);
+    border-color: #5ded37;
+}
+
+.pkg-header-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.pkg-title-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pkg-icon-hat, .pkg-icon-briefcase {
+    font-size: 22px;
+}
+
+.pkg-heading {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.gold-gradient-text {
+    background: linear-gradient(180deg, #ffd79e 0%, #c89551 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pkg-info-icon {
+    font-size: 16px;
+    color: #c89551;
+    cursor: pointer;
+}
+
+.pkg-price-tag {
+    background: linear-gradient(180deg, #5ded37 0%, #238b22 100%);
+    color: #051206;
+    font-weight: 800;
+    font-size: 17px;
+    padding: 7px 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 6px 0 14px 0;
+    box-shadow: 0 4px 12px rgba(76, 230, 41, 0.3);
+}
+
+.pkg-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pkg-feature-list li {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #d5d9d8;
+    line-height: 1.45;
+    display: flex;
+    align-items: flex-start;
+}
+
+.green-check {
+    color: #5ded37;
+    font-weight: 900;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+/* Wallet Action Row */
+.wallet-action-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.wallet-status-card {
+    position: relative;
+    background: linear-gradient(180deg, #10181b 0%, #080e10 100%);
+    border: 1.5px solid rgba(210, 121, 49, 0.45);
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.card-close-x {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    color: #c89551;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.status-card-inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.wallet-image-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #091012;
+    border: 1px solid rgba(210, 121, 49, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.status-text-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.status-heading {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+.status-state-red {
+    font-size: 12px;
+    font-weight: 800;
+    color: #ff4d4d;
+}
+
+.dot-red {
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.connect-wallet-main-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: linear-gradient(180deg, #102613 0%, #0a180c 100%);
+    border: 2px solid #5ded37;
+    border-radius: 14px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9), 0 0 20px rgba(93, 237, 55, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.connect-wallet-main-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.95), 0 0 25px rgba(93, 237, 55, 0.7);
+}
+
+.btn-left-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.green-wallet-symbol {
+    font-size: 22px;
+}
+
+.btn-right-chevron {
+    font-size: 18px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+/* Responsive Package & Wallet Grids */
 @media (max-width: 600px) {
-    .login-container {
-        padding: 15px 12px 40px 12px;
+    .package-grid {
+        grid-template-columns: 1fr;
     }
-    .login-card {
-        padding: 24px 18px;
-        border-radius: 16px;
+    .wallet-action-row {
+        grid-template-columns: 1fr;
     }
-    .login-title {
-        font-size: 22px;
-    }
-    .back-home-link span {
-        display: none;
+    .ibp-details-divider {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
     }
 }
