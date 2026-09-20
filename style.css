@@ -520,7 +520,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(180deg, #141c20 0%, #080d0e 100%) padding-box,
+    background: linear-gradient(180deg, #000d01 0%, #080d0e 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.3) 0%, rgba(255, 220, 170, 0.9) 20%, rgba(210, 121, 49, 0.35) 45%, rgba(255, 235, 195, 0.95) 70%, rgba(210, 121, 49, 0.3) 100%) border-box;
     border: 2px solid transparent;
     border-radius: 18px;
@@ -934,7 +934,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 620px;
-    background: linear-gradient(180deg, #141c20 0%, #080d0e 100%) padding-box,
+    background: linear-gradient(180deg, #000d01 0%, #080d0e 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.3) 0%, rgba(255, 220, 170, 0.9) 20%, rgba(210, 121, 49, 0.35) 45%, rgba(255, 235, 195, 0.95) 70%, rgba(210, 121, 49, 0.3) 100%) border-box;
     border: 2px solid transparent;
     border-radius: 20px;
