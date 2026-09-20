@@ -615,17 +615,20 @@ body {
    RESPONSIVE BREAKPOINTS (All Devices & Browsers)
    ========================================================================== */
 
-/* Large Displays / Desktops (1440px+) */
+/* Ultra Large / 4K Displays (1440px+) */
 @media (min-width: 1440px) {
     .market-candles-wrapper {
         right: calc((100vw - 1440px) / 2 - 80px);
+        width: 520px;
+        opacity: 0.65;
     }
     .hero-globe {
         left: calc((100vw - 1440px) / 2 - 160px);
+        width: 460px;
     }
 }
 
-/* Laptops & Small Desktops (1025px - 1439px) */
+/* Laptops & Desktops (1025px - 1439px) */
 @media (max-width: 1200px) {
     .hero-globe {
         width: 360px;
@@ -634,6 +637,7 @@ body {
     .market-candles-wrapper {
         width: 420px;
         right: -120px;
+        opacity: 0.5;
     }
 }
 
@@ -643,7 +647,13 @@ body {
     .ticker-item { padding: 0 10px; gap: 4px; min-width: 140px; }
     .hero-banner { padding: 10px 16px 60px 16px; }
     .hero-globe { width: 320px; left: -120px; opacity: 0.45; top: 38%; }
-    .market-candles-wrapper { width: 360px; right: -80px; opacity: 0.4; top: 38%; }
+    .market-candles-wrapper { 
+        display: block;
+        width: 360px; 
+        right: -80px; 
+        opacity: 0.4; 
+        top: 38%; 
+    }
     .hero-stats {
         flex-direction: row;
         padding: 14px 20px;
@@ -656,7 +666,18 @@ body {
     .hero-design-overlay { opacity: 0.25; }
 }
 
-/* Mobile Devices (320px - 767px - iPhone, Galaxy, Pixel) */
+/* Small Tablets & Large Mobile (601px - 767px) */
+@media (max-width: 767px) {
+    .market-candles-wrapper {
+        display: block;
+        width: 310px;
+        right: -70px;
+        top: 42%;
+        opacity: 0.35;
+    }
+}
+
+/* Mobile Devices (320px - 600px - iPhone, Galaxy, Pixel) */
 @media (max-width: 600px) {
     .main-header {
         height: clamp(60px, 14vw, 90px);
@@ -730,7 +751,15 @@ body {
         opacity: 0.35; 
         top: 42%; 
     }
-    .market-candles-wrapper { display: none; }
+    
+    /* Market Candlesticks Responsive on Mobile */
+    .market-candles-wrapper { 
+        display: block;
+        width: 260px;
+        right: -80px;
+        top: 45%;
+        opacity: 0.28;
+    }
     .hero-design-overlay { opacity: 0.2; }
 }
 
@@ -741,6 +770,12 @@ body {
     }
     .stat-value { font-size: 16px; }
     .stat-label { font-size: 9px; }
+    
+    .market-candles-wrapper {
+        width: 220px;
+        right: -70px;
+        opacity: 0.22;
+    }
 }
 
 /* ==========================================================================
