@@ -343,27 +343,24 @@ body {
 
 /* 3. Active Live Forming Candle (c10): Real-time live price ticks */
 .candle-group.c10.live-candle {
+    opacity: 1 !important;
     transform-box: fill-box;
-    transform-origin: 395px 60px;
-    animation: activeLiveTick 3s ease-in-out infinite alternate;
+    transform-origin: 395px 50px;
+    animation: activeLiveTick 2.5s ease-in-out infinite alternate;
 }
 
 @keyframes activeLiveTick {
     0% {
         transform: translateY(0px) scaleY(1);
-        filter: drop-shadow(0 0 6px rgba(76, 230, 41, 0.5));
+        filter: drop-shadow(0 0 8px rgba(93, 237, 55, 0.6));
     }
-    40% {
-        transform: translateY(-5px) scaleY(1.10);
-        filter: drop-shadow(0 0 14px rgba(76, 230, 41, 0.85));
-    }
-    75% {
-        transform: translateY(-10px) scaleY(1.20);
-        filter: drop-shadow(0 0 20px rgba(76, 230, 41, 1));
+    50% {
+        transform: translateY(-8px) scaleY(1.15);
+        filter: drop-shadow(0 0 20px rgba(93, 237, 55, 1));
     }
     100% {
-        transform: translateY(-6px) scaleY(1.12);
-        filter: drop-shadow(0 0 10px rgba(76, 230, 41, 0.7));
+        transform: translateY(-4px) scaleY(1.08);
+        filter: drop-shadow(0 0 12px rgba(93, 237, 55, 0.8));
     }
 }
 
