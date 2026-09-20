@@ -270,137 +270,106 @@ body {
     overflow: visible;
 }
 
-/* Full Logical Real-Time Trading Chart Animations */
+/* Logically Correct Real-Time Trading Chart System */
+
+/* 1. Continuous Trendline Laser Sweep Line */
+.trend-line-sweep {
+    stroke-dasharray: 80 400;
+    animation: laserSweepMove 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes laserSweepMove {
+    0% {
+        stroke-dashoffset: 480;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: -80;
+        opacity: 0;
+    }
+}
+
+/* 2. Fixed Historical OHLC Candles (c1 - c9): No height distortion, only sequential light sweep shimmer */
 .candle-group {
-    transform-box: fill-box;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
-/* Bullish Green Candle Motion */
-.candle-group.c1 {
-    transform-origin: 35px 220px;
-    animation: bullishCandlePulse 3.6s ease-in-out 0.0s infinite alternate;
-}
-.candle-group.c2 {
-    transform-origin: 75px 190px;
-    animation: bullishCandlePulse 3.9s ease-in-out 0.4s infinite alternate;
-}
-.candle-group.c4 {
-    transform-origin: 155px 165px;
-    animation: bullishCandlePulse 3.7s ease-in-out 0.2s infinite alternate;
-}
-.candle-group.c5 {
-    transform-origin: 195px 145px;
-    animation: bullishCandlePulse 3.4s ease-in-out 0.9s infinite alternate;
-}
-.candle-group.c7 {
-    transform-origin: 275px 120px;
-    animation: bullishCandlePulse 3.8s ease-in-out 1.2s infinite alternate;
-}
-.candle-group.c8 {
-    transform-origin: 315px 90px;
-    animation: bullishCandlePulse 3.3s ease-in-out 0.6s infinite alternate;
+.candle-group.c1 { animation: greenCandleShimmer 3s ease-in-out 0.0s infinite; }
+.candle-group.c2 { animation: greenCandleShimmer 3s ease-in-out 0.3s infinite; }
+.candle-group.c3 { animation: redCandleShimmer 3s ease-in-out 0.6s infinite; }
+.candle-group.c4 { animation: greenCandleShimmer 3s ease-in-out 0.9s infinite; }
+.candle-group.c5 { animation: greenCandleShimmer 3s ease-in-out 1.2s infinite; }
+.candle-group.c6 { animation: redCandleShimmer 3s ease-in-out 1.5s infinite; }
+.candle-group.c7 { animation: greenCandleShimmer 3s ease-in-out 1.8s infinite; }
+.candle-group.c8 { animation: greenCandleShimmer 3s ease-in-out 2.1s infinite; }
+.candle-group.c9 { animation: redCandleShimmer 3s ease-in-out 2.4s infinite; }
+
+@keyframes greenCandleShimmer {
+    0% {
+        opacity: 0.75;
+        filter: drop-shadow(0 0 3px rgba(76, 230, 41, 0.3));
+    }
+    20% {
+        opacity: 1;
+        filter: drop-shadow(0 0 12px rgba(76, 230, 41, 0.95));
+    }
+    40%, 100% {
+        opacity: 0.75;
+        filter: drop-shadow(0 0 3px rgba(76, 230, 41, 0.3));
+    }
 }
 
-/* Bearish Red Candle Motion */
-.candle-group.c3 {
-    transform-origin: 115px 210px;
-    animation: bearishCandlePulse 3.2s ease-in-out 0.7s infinite alternate;
-}
-.candle-group.c6 {
-    transform-origin: 235px 160px;
-    animation: bearishCandlePulse 2.8s ease-in-out 0.3s infinite alternate;
-}
-.candle-group.c9 {
-    transform-origin: 355px 105px;
-    animation: bearishCandlePulse 3.5s ease-in-out 1.1s infinite alternate;
+@keyframes redCandleShimmer {
+    0% {
+        opacity: 0.75;
+        filter: drop-shadow(0 0 3px rgba(255, 77, 77, 0.3));
+    }
+    20% {
+        opacity: 1;
+        filter: drop-shadow(0 0 12px rgba(255, 77, 77, 0.95));
+    }
+    40%, 100% {
+        opacity: 0.75;
+        filter: drop-shadow(0 0 3px rgba(255, 77, 77, 0.3));
+    }
 }
 
-/* Active Live Lead Candle (c10) */
+/* 3. Active Live Forming Candle (c10): Real-time live price ticks */
 .candle-group.c10.live-candle {
+    transform-box: fill-box;
     transform-origin: 395px 60px;
-    animation: liveCandlePulse 4s ease-in-out 0.0s infinite alternate;
+    animation: activeLiveTick 3s ease-in-out infinite alternate;
 }
 
-@keyframes bullishCandlePulse {
-    0% {
-        transform: translateY(0px) scaleY(1);
-        filter: drop-shadow(0 0 4px rgba(76, 230, 41, 0.4));
-    }
-    40% {
-        transform: translateY(-3px) scaleY(1.07);
-        filter: drop-shadow(0 0 8px rgba(76, 230, 41, 0.65));
-    }
-    75% {
-        transform: translateY(-6px) scaleY(1.12);
-        filter: drop-shadow(0 0 12px rgba(76, 230, 41, 0.85));
-    }
-    100% {
-        transform: translateY(-1px) scaleY(1.02);
-        filter: drop-shadow(0 0 5px rgba(76, 230, 41, 0.5));
-    }
-}
-
-@keyframes bearishCandlePulse {
-    0% {
-        transform: translateY(0px) scaleY(1);
-        filter: drop-shadow(0 0 4px rgba(255, 77, 77, 0.4));
-    }
-    40% {
-        transform: translateY(2px) scaleY(1.05);
-        filter: drop-shadow(0 0 7px rgba(255, 77, 77, 0.6));
-    }
-    75% {
-        transform: translateY(5px) scaleY(1.10);
-        filter: drop-shadow(0 0 10px rgba(255, 77, 77, 0.8));
-    }
-    100% {
-        transform: translateY(1px) scaleY(1.02);
-        filter: drop-shadow(0 0 4px rgba(255, 77, 77, 0.45));
-    }
-}
-
-@keyframes liveCandlePulse {
+@keyframes activeLiveTick {
     0% {
         transform: translateY(0px) scaleY(1);
         filter: drop-shadow(0 0 6px rgba(76, 230, 41, 0.5));
     }
     40% {
-        transform: translateY(-6px) scaleY(1.12);
-        filter: drop-shadow(0 0 14px rgba(76, 230, 41, 0.8));
+        transform: translateY(-5px) scaleY(1.10);
+        filter: drop-shadow(0 0 14px rgba(76, 230, 41, 0.85));
     }
     75% {
-        transform: translateY(-12px) scaleY(1.24);
+        transform: translateY(-10px) scaleY(1.20);
         filter: drop-shadow(0 0 20px rgba(76, 230, 41, 1));
     }
     100% {
-        transform: translateY(-8px) scaleY(1.15);
-        filter: drop-shadow(0 0 12px rgba(76, 230, 41, 0.7));
+        transform: translateY(-6px) scaleY(1.12);
+        filter: drop-shadow(0 0 10px rgba(76, 230, 41, 0.7));
     }
 }
 
-/* Trendline Laser Pulse */
-.animated-trend-line {
-    animation: trendLineGlow 3.5s ease-in-out infinite alternate;
-}
-
-@keyframes trendLineGlow {
-    0% {
-        stroke-width: 2.5px;
-        filter: drop-shadow(0 0 4px rgba(76, 230, 41, 0.5));
-    }
-    50% {
-        stroke-width: 3.2px;
-        filter: drop-shadow(0 0 12px rgba(76, 230, 41, 0.95));
-    }
-    100% {
-        stroke-width: 2.5px;
-        filter: drop-shadow(0 0 5px rgba(76, 230, 41, 0.6));
-    }
-}
-
-/* Live Price Line & Badge Sync */
+/* Live Price Line & Badge Sync with Active Live Candle */
 .live-price-group {
-    animation: livePriceSync 4s ease-in-out 0.0s infinite alternate;
+    animation: livePriceSync 3s ease-in-out infinite alternate;
 }
 
 @keyframes livePriceSync {
@@ -408,19 +377,19 @@ body {
         transform: translateY(0px);
     }
     40% {
-        transform: translateY(-6px);
+        transform: translateY(-5px);
     }
     75% {
-        transform: translateY(-12px);
+        transform: translateY(-10px);
     }
     100% {
-        transform: translateY(-8px);
+        transform: translateY(-6px);
     }
 }
 
 /* Price Ping Beacon Ripple */
 .price-ping-ring {
-    animation: pricePingRipple 1.8s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    animation: pricePingRipple 1.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
     transform-origin: 395px 35px;
 }
 
