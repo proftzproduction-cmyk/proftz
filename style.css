@@ -235,7 +235,7 @@ body {
 
 .market-candles-wrapper {
     position: absolute;
-    top: 25%;
+    top: 35%;
     right: -160px;
     transform: translateY(-50%);
     width: 480px;
@@ -635,7 +635,7 @@ body {
     .ticker-item { padding: 0 10px; gap: 4px; min-width: 140px; }
     .hero-banner { padding: 10px 16px 60px 16px; }
     .hero-globe { width: 320px; left: -120px; opacity: 0.45; top: 38%; }
-    .market-candles-wrapper { width: 360px; right: -80px; opacity: 0.4; }
+    .market-candles-wrapper { width: 360px; right: -80px; opacity: 0.4; top: 38%; }
     .hero-stats {
         flex-direction: row;
         padding: 14px 20px;
