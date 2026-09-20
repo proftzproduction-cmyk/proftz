@@ -756,12 +756,129 @@ body {
 
 .login-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 20px 80px 20px;
+    padding: 20px 20px 80px 20px;
     min-height: calc(100vh - 180px);
     position: relative;
     z-index: 1;
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 680px;
+    z-index: 2;
+}
+
+/* Connect & Register Section */
+.connect-register-section {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 35px;
+    padding: 0 5px;
+}
+
+.connect-header-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.connect-main-title {
+    font-size: clamp(32px, 5.5vw, 44px);
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.copper-accent-bar {
+    display: inline-block;
+    width: 75px;
+    height: 4px;
+    background: linear-gradient(90deg, #d3833b 0%, #f3b664 50%, #d3833b 100%);
+    border-radius: 3px;
+    box-shadow: 0 0 12px rgba(211, 131, 59, 0.7);
+    flex-shrink: 0;
+}
+
+.connect-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e2e6e5;
+    margin-bottom: 6px;
+}
+
+.connect-desc {
+    font-size: 14px;
+    color: #a0a5a8;
+    line-height: 1.55;
+    margin-bottom: 28px;
+    max-width: 580px;
+}
+
+/* 4-Step Tracker Row */
+.step-tracker-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 560px;
+    position: relative;
+}
+
+.step-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.step-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #0d1518;
+    border: 2px solid #283439;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0a5a8;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.step-node.active .step-circle {
+    background: #196f18;
+    border-color: #5ded37;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(93, 237, 55, 0.8), 0 0 35px rgba(93, 237, 55, 0.4);
+    transform: scale(1.08);
+}
+
+.step-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #a0a5a8;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.step-node.active .step-title {
+    color: #ffffff;
+    font-weight: 700;
 }
 
 .login-globe {
@@ -773,7 +890,7 @@ body {
 .login-card {
     position: relative;
     width: 100%;
-    max-width: 480px;
+    max-width: 540px;
     background: linear-gradient(180deg, #141c20 0%, #080d0e 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.3) 0%, rgba(255, 220, 170, 0.9) 20%, rgba(210, 121, 49, 0.35) 45%, rgba(255, 235, 195, 0.95) 70%, rgba(210, 121, 49, 0.3) 100%) border-box;
     border: 2px solid transparent;

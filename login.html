@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Sign in to your PROFTZ account to access your 12-Slot FLOW Engine, USDT earnings, and Web3 dashboard.">
-    <title>Login - PROFTZ FLOW Engine</title>
+    <meta name="description" content="Connect & Register for PROFTZ 12-Slot FLOW Engine & USDT earnings platform. 4-step smart contract verification sequence.">
+    <title>Connect & Register - PROFTZ FLOW Engine</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -41,189 +41,208 @@
         <img src="public/design overlay.png" class="hero-design-overlay" alt="Design Overlay">
         <img src="public/globe.png" class="hero-globe login-globe" alt="Network Globe">
 
-        <div class="login-card">
-            <div class="flare top-left"></div>
-            <div class="flare top-right"></div>
-            <div class="flare bottom-left"></div>
-            <div class="flare bottom-right"></div>
-
-            <div class="login-card-header">
-                <div class="login-badge">
-                    <span>WEB3 AUTHENTICATION</span>
+        <div class="login-wrapper">
+            <!-- First Section: Connect & Register 4-Step Verification Header -->
+            <section class="connect-register-section">
+                <div class="connect-header-row">
+                    <h1 class="connect-main-title">Connect & Register</h1>
+                    <span class="copper-accent-bar"></span>
                 </div>
-                <h1 class="login-title">Sign In to <span class="highlight">PROFTZ</span></h1>
-                <p class="login-subtitle">Access your 12-Slot FLOW Engine & live USDT matrix dashboard</p>
-            </div>
+                <p class="connect-subtitle">Complete the below form to set up your a/c.</p>
+                <p class="connect-desc">Follow the 4 step verification sequence securely handled by smart contract configurations.</p>
 
-            <!-- Auth Mode Switcher -->
-            <div class="auth-tabs" role="tablist">
-                <button type="button" class="tab-btn active" id="tab-web3" role="tab" aria-selected="true" onclick="switchAuthTab('web3')">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
-                        <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path>
-                        <path d="M18 12a2 2 0 0 0 0 4h4v-4z"></path>
-                    </svg>
-                    <span>Web3 Wallet</span>
-                </button>
-                <button type="button" class="tab-btn" id="tab-credentials" role="tab" aria-selected="false" onclick="switchAuthTab('credentials')">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                    <span>Member Credentials</span>
-                </button>
-            </div>
+                <!-- 4-Step Process Tracker -->
+                <div class="step-tracker-row">
+                    <div class="step-node active" id="step-node-1" onclick="goToStep(1)">
+                        <div class="step-circle">
+                            <span>1</span>
+                        </div>
+                        <span class="step-title">Mentor ID</span>
+                    </div>
 
-            <!-- Web3 Wallet Panel -->
-            <div class="auth-panel active" id="panel-web3">
-                <div class="wallet-options">
-                    <button type="button" class="wallet-btn metamask-btn">
-                        <div class="wallet-icon-box">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#f6851b" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                    <div class="step-node" id="step-node-2" onclick="goToStep(2)">
+                        <div class="step-circle">
+                            <span>2</span>
                         </div>
-                        <div class="wallet-text">
-                            <span class="wallet-name">MetaMask</span>
-                            <span class="wallet-desc">Connect with MetaMask browser extension or app</span>
-                        </div>
-                        <span class="wallet-arrow">&rarr;</span>
-                    </button>
+                        <span class="step-title">User Details</span>
+                    </div>
 
-                    <button type="button" class="wallet-btn walletconnect-btn">
-                        <div class="wallet-icon-box">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3b99fc" stroke-width="2">
-                                <circle cx="12" cy="12" r="9"/>
-                                <path d="M8 12l3 3 5-5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                    <div class="step-node" id="step-node-3" onclick="goToStep(3)">
+                        <div class="step-circle">
+                            <span>3</span>
                         </div>
-                        <div class="wallet-text">
-                            <span class="wallet-name">WalletConnect</span>
-                            <span class="wallet-desc">Scan with Trust Wallet, Rainbow, or 100+ mobile wallets</span>
-                        </div>
-                        <span class="wallet-arrow">&rarr;</span>
-                    </button>
+                        <span class="step-title">Approve</span>
+                    </div>
 
-                    <button type="button" class="wallet-btn trustwallet-btn">
-                        <div class="wallet-icon-box">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#0500ff" stroke-width="2">
-                                <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                    <div class="step-node" id="step-node-4" onclick="goToStep(4)">
+                        <div class="step-circle">
+                            <span>4</span>
                         </div>
-                        <div class="wallet-text">
-                            <span class="wallet-name">Trust Wallet</span>
-                            <span class="wallet-desc">Connect securely via Trust Wallet app</span>
-                        </div>
-                        <span class="wallet-arrow">&rarr;</span>
-                    </button>
+                        <span class="step-title">Register</span>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Member Credentials Form Panel -->
-            <div class="auth-panel" id="panel-credentials">
-                <form class="login-form" onsubmit="handleLogin(event)">
-                    <div class="form-group">
-                        <label for="username" class="form-label">Member ID / Email</label>
-                        <div class="input-wrapper">
-                            <div class="input-icon">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4ce629" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
+            <!-- Card Container -->
+            <div class="login-card">
+                <div class="flare top-left"></div>
+                <div class="flare top-right"></div>
+                <div class="flare bottom-left"></div>
+                <div class="flare bottom-right"></div>
+
+                <!-- Step 1: Mentor ID -->
+                <div class="step-panel active" id="step-panel-1">
+                    <div class="login-card-header">
+                        <div class="login-badge">
+                            <span>STEP 1 OF 4 &bull; SPONSOR VERIFICATION</span>
+                        </div>
+                        <h2 class="login-title">Enter <span class="highlight">Mentor ID</span></h2>
+                        <p class="login-subtitle">Provide your referrer's IBP Mentor ID to bind your FLOW matrix slot</p>
+                    </div>
+
+                    <form onsubmit="proceedToStep(event, 2)">
+                        <div class="form-group">
+                            <label for="mentor-id" class="form-label">Mentor / Sponsor ID</label>
+                            <div class="input-wrapper">
+                                <div class="input-icon">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4ce629" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="8.5" cy="7" r="4"></circle>
+                                        <polyline points="17 11 19 13 23 9"></polyline>
+                                    </svg>
+                                </div>
+                                <input type="text" id="mentor-id" class="form-input" placeholder="e.g. PRFTZ-98421" required>
                             </div>
-                            <input type="text" id="username" name="username" class="form-input" placeholder="Enter your Member ID or Email" required autocomplete="username">
                         </div>
+                        <button type="submit" class="btn-primary submit-btn">
+                            <span>Verify Mentor ID & Continue</span>
+                            <span class="btn-arrow">&rarr;</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Step 2: User Details -->
+                <div class="step-panel" id="step-panel-2">
+                    <div class="login-card-header">
+                        <div class="login-badge">
+                            <span>STEP 2 OF 4 &bull; USER DETAILS</span>
+                        </div>
+                        <h2 class="login-title">Account <span class="highlight">Details</span></h2>
+                        <p class="login-subtitle">Set up your Web3 username and security contact email</p>
                     </div>
 
-                    <div class="form-group">
-                        <div class="label-row">
-                            <label for="password" class="form-label">Security Password</label>
-                            <a href="#" class="forgot-link">Forgot Password?</a>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="input-icon">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4ce629" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                </svg>
+                    <form onsubmit="proceedToStep(event, 3)">
+                        <div class="form-group">
+                            <label for="reg-username" class="form-label">Preferred Username</label>
+                            <div class="input-wrapper">
+                                <div class="input-icon">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4ce629" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                                <input type="text" id="reg-username" class="form-input" placeholder="Choose a username" required>
                             </div>
-                            <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
-                            <button type="button" class="toggle-password" onclick="togglePasswordVisibility()" aria-label="Toggle password visibility">
-                                <svg id="eye-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#a0a5a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                </svg>
-                            </button>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 14px;">
+                            <label for="reg-email" class="form-label">Email Address</label>
+                            <div class="input-wrapper">
+                                <div class="input-icon">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4ce629" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <input type="email" id="reg-email" class="form-input" placeholder="name@domain.com" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary submit-btn" style="margin-top: 20px;">
+                            <span>Continue to Smart Contract Approval</span>
+                            <span class="btn-arrow">&rarr;</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Step 3: Approve -->
+                <div class="step-panel" id="step-panel-3">
+                    <div class="login-card-header">
+                        <div class="login-badge">
+                            <span>STEP 3 OF 4 &bull; SMART CONTRACT</span>
+                        </div>
+                        <h2 class="login-title">Approve <span class="highlight">USDT Contract</span></h2>
+                        <p class="login-subtitle">Approve USDT allowance for 12-Slot FLOW Engine smart contract execution</p>
+                    </div>
+
+                    <div class="approve-info-box">
+                        <div class="info-row">
+                            <span>Network:</span> <strong>BNB Smart Chain (BEP-20)</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Token:</span> <strong>USDT (Tether)</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Contract Status:</span> <span class="status-verified">&check; Verified Source</span>
                         </div>
                     </div>
 
-                    <div class="form-options">
-                        <label class="checkbox-container">
-                            <input type="checkbox" name="remember" checked>
-                            <span class="checkmark"></span>
-                            <span class="checkbox-label">Keep me logged in on this device</span>
-                        </label>
-                    </div>
-
-                    <button type="submit" class="btn-primary submit-btn">
-                        <span>Sign In to FLOW Engine</span>
+                    <button type="button" class="btn-primary submit-btn" onclick="proceedToStepDirect(4)">
+                        <span>Approve USDT Allowance</span>
                         <span class="btn-arrow">&rarr;</span>
                     </button>
-                </form>
-            </div>
+                </div>
 
-            <div class="login-card-footer">
-                <p>Don't have an IBP account yet? <a href="#" class="register-link">Register New Account &rarr;</a></p>
+                <!-- Step 4: Register -->
+                <div class="step-panel" id="step-panel-4">
+                    <div class="login-card-header">
+                        <div class="login-badge">
+                            <span>STEP 4 OF 4 &bull; FINAL REGISTRATION</span>
+                        </div>
+                        <h2 class="login-title">Complete <span class="highlight">Registration</span></h2>
+                        <p class="login-subtitle">Execute smart contract transaction to initialize your 12-Slot FLOW Engine</p>
+                    </div>
+
+                    <button type="button" class="btn-primary submit-btn" onclick="finishRegistration()">
+                        <span>Execute Registration & Register &rarr;</span>
+                    </button>
+                </div>
+
+                <div class="login-card-footer">
+                    <p>Already registered? <a href="#" class="register-link" onclick="goToStep(1)">Sign in to account &rarr;</a></p>
+                </div>
             </div>
         </div>
     </main>
 
     <script>
-        function switchAuthTab(tab) {
-            const tabWeb3 = document.getElementById('tab-web3');
-            const tabCreds = document.getElementById('tab-credentials');
-            const panelWeb3 = document.getElementById('panel-web3');
-            const panelCreds = document.getElementById('panel-credentials');
-
-            if (tab === 'web3') {
-                tabWeb3.classList.add('active');
-                tabWeb3.setAttribute('aria-selected', 'true');
-                tabCreds.classList.remove('active');
-                tabCreds.setAttribute('aria-selected', 'false');
-
-                panelWeb3.classList.add('active');
-                panelCreds.classList.remove('active');
-            } else {
-                tabCreds.classList.add('active');
-                tabCreds.setAttribute('aria-selected', 'true');
-                tabWeb3.classList.remove('active');
-                tabWeb3.setAttribute('aria-selected', 'false');
-
-                panelCreds.classList.add('active');
-                panelWeb3.classList.remove('active');
+        function goToStep(stepNumber) {
+            // Update step nodes
+            for (let i = 1; i <= 4; i++) {
+                const node = document.getElementById('step-node-' + i);
+                const panel = document.getElementById('step-panel-' + i);
+                if (i === stepNumber) {
+                    node.classList.add('active');
+                    panel.classList.add('active');
+                } else {
+                    node.classList.remove('active');
+                    panel.classList.remove('active');
+                }
             }
         }
 
-        function togglePasswordVisibility() {
-            const passwordInput = document.getElementById('password');
-            const eyeIcon = document.getElementById('eye-icon');
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                eyeIcon.setAttribute('stroke', '#5ded37');
-            } else {
-                passwordInput.type = 'password';
-                eyeIcon.setAttribute('stroke', '#a0a5a8');
-            }
-        }
-
-        function handleLogin(event) {
+        function proceedToStep(event, nextStep) {
             event.preventDefault();
-            const btn = document.querySelector('.submit-btn');
-            btn.innerHTML = '<span>Authenticating...</span>';
-            setTimeout(() => {
-                alert('Authentication successful! Redirecting to PROFTZ Dashboard...');
-                window.location.href = 'index.html';
-            }, 1200);
+            goToStep(nextStep);
+        }
+
+        function proceedToStepDirect(nextStep) {
+            goToStep(nextStep);
+        }
+
+        function finishRegistration() {
+            alert('Congratulations! Your account registration transaction has been executed on the blockchain.');
+            window.location.href = 'index.html';
         }
     </script>
 </body>
