@@ -77,6 +77,14 @@ body {
     height: 100%;
 }
 
+.header-center a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
 .logo {
     max-height: 85%;
     max-width: 100%;
