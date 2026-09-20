@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proftz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-inner">
+            <div class="header-left"></div>
+            <div class="header-center">
+                <img src="public/logo.webp" alt="Proftz Logo" class="logo">
+            </div>
+            <div class="header-right">
+                <button class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="crypto-ticker">
+        <div class="ticker-item">
+            <div class="ticker-top">
+                <img src="https://cryptologos.cc/logos/bnb-bnb-logo.png" alt="BNB" class="crypto-icon">
+                <span class="crypto-name">BNB</span>
+            </div>
+            <div class="ticker-bottom">
+                <span class="crypto-price">97.87B</span> <span class="crypto-currency">USD</span> <span class="crypto-change positive">+1.17%</span>
+            </div>
+        </div>
+        <div class="ticker-divider"></div>
+        <div class="ticker-item">
+            <div class="ticker-top">
+                <img src="https://cryptologos.cc/logos/bnb-bnb-logo.png" alt="BNBUSD" class="crypto-icon">
+                <span class="crypto-name">BNBUSD</span>
+            </div>
+            <div class="ticker-bottom">
+                <span class="crypto-price">734.92</span> <span class="crypto-currency">USD</span> <span class="crypto-change positive">+1.00%</span>
+            </div>
+        </div>
+        <div class="ticker-divider"></div>
+        <div class="ticker-item">
+            <div class="ticker-top">
+                <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="BTCUSDT" class="crypto-icon">
+                <span class="crypto-name">BTCUSDT</span>
+            </div>
+            <div class="ticker-bottom">
+                <span class="crypto-price">77,456.21</span> <span class="crypto-currency">USDT</span> <span class="crypto-change positive">+0.30%</span>
+            </div>
+        </div>
+        <div class="ticker-divider"></div>
+        <div class="ticker-item">
+            <div class="ticker-top">
+                <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETHUSDT" class="crypto-icon">
+                <span class="crypto-name">ETHUSDT</span>
+            </div>
+            <div class="ticker-bottom">
+                <span class="crypto-price">2,539.20</span> <span class="crypto-currency">USDT</span> <span class="crypto-change positive">+0.82%</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero-banner">
+        <img src="public/design overlay.png" class="hero-design-overlay" alt="Design Overlay">
+        <img src="public/globe.png" class="hero-globe" alt="Network Globe">
+        <div class="market-candles-wrapper">
+            <svg class="market-candles-svg" viewBox="0 0 450 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="candleGreenGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#5ded37" />
+                        <stop offset="100%" stop-color="#1f7a1e" />
+                    </linearGradient>
+                    <linearGradient id="candleRedGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#ff4d4d" />
+                        <stop offset="100%" stop-color="#990000" />
+                    </linearGradient>
+                    <linearGradient id="trendAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="rgba(76, 230, 41, 0.25)" />
+                        <stop offset="100%" stop-color="rgba(76, 230, 41, 0)" />
+                    </linearGradient>
+                    <filter id="greenGlow" x="-30%" y="-30%" width="160%" height="160%">
+                        <feGaussianBlur stdDeviation="3.5" result="blur" />
+                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                    <filter id="redGlow" x="-30%" y="-30%" width="160%" height="160%">
+                        <feGaussianBlur stdDeviation="3.5" result="blur" />
+                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                </defs>
+
+                <!-- Grid Lines -->
+                <line x1="0" y1="50" x2="450" y2="50" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" />
+                <line x1="0" y1="110" x2="450" y2="110" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" />
+                <line x1="0" y1="170" x2="450" y2="170" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" />
+                <line x1="0" y1="230" x2="450" y2="230" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" />
+
+                <!-- Glow Area Fill -->
+                <path d="M 35 210 L 75 180 L 115 200 L 155 155 L 195 130 L 235 150 L 275 105 L 315 75 L 355 95 L 395 40 L 395 270 L 35 270 Z" fill="url(#trendAreaGrad)" />
+
+                <!-- Trend Line -->
+                <path class="animated-trend-line" d="M 35 210 L 75 180 L 115 200 L 155 155 L 195 130 L 235 150 L 275 105 L 315 75 L 355 95 L 395 40" stroke="#4ce629" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#greenGlow)" />
+
+                <!-- Candlesticks -->
+                <!-- Candle 1: GREEN Rising -->
+                <g class="candle-group c1">
+                    <line x1="35" y1="195" x2="35" y2="245" stroke="#4ce629" stroke-width="1.8" />
+                    <rect x="28" y="205" width="14" height="28" rx="2.5" fill="url(#candleGreenGrad)" stroke="#4ce629" stroke-width="1" filter="url(#greenGlow)" />
+                </g>
+                <!-- Candle 2: GREEN Rising -->
+                <g class="candle-group c2">
+                    <line x1="75" y1="165" x2="75" y2="215" stroke="#4ce629" stroke-width="1.8" />
+                    <rect x="68" y="175" width="14" height="30" rx="2.5" fill="url(#candleGreenGrad)" stroke="#4ce629" stroke-width="1" filter="url(#greenGlow)" />
+                </g>
+                <!-- Candle 3: RED Going Down / Dip -->
+                <g class="candle-group c3 red-candle">
+                    <line x1="115" y1="185" x2="115" y2="230" stroke="#ff4d4d" stroke-width="1.8" />
+                    <rect x="108" y="195" width="14" height="26" rx="2.5" fill="url(#candleRedGrad)" stroke="#ff4d4d" stroke-width="1" filter="url(#redGlow)" />
+                </g>
+                <!-- Candle 4: GREEN Rebound -->
+                <g class="candle-group c4">
+                    <line x1="155" y1="140" x2="155" y2="195" stroke="#4ce629" stroke-width="1.8" />
+                    <rect x="148" y="150" width="14" height="34" rx="2.5" fill="url(#candleGreenGrad)" stroke="#4ce629" stroke-width="1" filter="url(#greenGlow)" />
+                </g>
+                <!-- Candle 5: GREEN Rally -->
+                <g class="candle-group c5">
+                    <line x1="195" y1="115" x2="195" y2="170" stroke="#4ce629" stroke-width="1.8" />
+                    <rect x="188" y="125" width="14" height="36" rx="2.5" fill="url(#candleGreenGrad)" stroke="#4ce629" stroke-width="1" filter="url(#greenGlow)" />
+                </g>
+                <!-- Candle 6: RED Going Down / Pullback -->
+                <g class="candle-group c6 red-candle">
+                    <line x1="235" y1="135" x2="235" y2="180" stroke="#ff4d4d" stroke-width="1.8" />
+                    <rect x="228" y="145" width="14" height="28" rx="2.5" fill="url(#candleRedGrad)" stroke="#ff4d4d" stroke-width="1" filter="url(#redGlow)" />
+                </g>
+                <!-- Candle 7: GREEN Breakout -->
+                <g class="candle-group c7">
+                    <line x1="275" y1="90" x2="275" y2="145" stroke="#4ce629" stroke-width="1.8" />
+                    <rect x="268" y="100" width="14" height="38" rx="2.5" fill="url(#candleGreenGrad)" stroke="#4ce629" stroke-width="1" filter="url(#greenGlow)" />
+                </g>
+                <!-- Candle 8: GREEN Higher High -->
+                <g class="candle-group c8">
+                    <line x1="315" y1="60" x2="315" y2="120" stroke="#4ce629" stroke-width="1.8" />
+                    <rect x="308" y="70" width="14" height="42" rx="2.5" fill="url(#candleGreenGrad)" stroke="#4ce629" stroke-width="1" filter="url(#greenGlow)" filter="url(#greenGlow)" />
+                </g>
+                <!-- Candle 9: RED Going Down / Brief Dip -->
+                <g class="candle-group c9 red-candle">
+                    <line x1="355" y1="80" x2="355" y2="125" stroke="#ff4d4d" stroke-width="1.8" />
+                    <rect x="348" y="90" width="14" height="26" rx="2.5" fill="url(#candleRedGrad)" stroke="#ff4d4d" stroke-width="1" filter="url(#redGlow)" />
+                </g>
+
+                <!-- Candle 10: Live Active Green Candle -->
+                <g class="candle-group c10 live-candle">
+                    <line class="live-wick" x1="395" y1="20" x2="395" y2="85" stroke="#4ce629" stroke-width="2.2" />
+                    <rect class="live-body" x="388" y="32" width="14" height="47" rx="2.5" fill="url(#candleGreenGrad)" stroke="#4ce629" stroke-width="1.2" filter="url(#greenGlow)" />
+                </g>
+
+                <!-- Dynamic Live Price Beacon & Badge Line -->
+                <g class="live-price-group">
+                    <line class="price-dash-line" x1="0" y1="35" x2="450" y2="35" stroke="#4ce629" stroke-width="1" stroke-dasharray="3 3" opacity="0.85" />
+                    <circle class="price-ping-ring" cx="395" cy="35" r="8" stroke="#4ce629" stroke-width="1.5" fill="none" />
+                    <circle class="price-ping-inner" cx="395" cy="35" r="3.5" fill="#5ded37" filter="url(#greenGlow)" />
+                    <rect class="price-badge-bg" x="372" y="23" width="68" height="24" rx="4" fill="#0c180e" stroke="#4ce629" stroke-width="1" />
+                    <text class="price-badge-text" x="406" y="39" fill="#5ded37" font-size="10.5" font-family="monospace" font-weight="bold" text-anchor="middle">+6.18%</text>
+                </g>
+            </svg>
+        </div>
+        
+        <div class="hero-badge">
+            <span>USDT</span> <span class="dot">&bull;</span> <span>WEB3 NETWORK PLATFORM</span> <span class="dot">&bull;</span> <span>FLOW ENGINE</span>
+        </div>
+        
+        <h1 class="hero-title-main">Build your network.</h1>
+        <h1 class="hero-title-highlight">Multiply your income.</h1>
+        
+        <p class="hero-description">
+            PROFTZ is the premium USDT earnings platform built on the 12-Slot FLOW Engine &mdash; engineered for IBPs who demand real income, transparent systems, and infinite duplication.
+        </p>
+        
+        <div class="hero-actions">
+            <button class="btn-primary">Activate your FLOW &rarr;</button>
+            <button class="btn-secondary">See how it works &rarr;</button>
+        </div>
+        
+        <div class="hero-stats">
+            <div class="flare top-left"></div>
+            <div class="flare top-right"></div>
+            <div class="flare bottom-left"></div>
+            <div class="flare bottom-right"></div>
+            
+            <div class="stat-item">
+                <div class="stat-main-row">
+                    <div class="stat-icon stat-icon-coins">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#4ce629" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                    </div>
+                    <h2 class="stat-value">$4.2M</h2>
+                </div>
+                <p class="stat-label">Total Trading Volume</p>
+            </div>
+            
+            <div class="stat-divider"></div>
+            
+            <div class="stat-item">
+                <div class="stat-main-row">
+                    <div class="stat-icon stat-icon-users">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#4ce629" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h2 class="stat-value">12,847</h2>
+                </div>
+                <p class="stat-label">Active Members</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
