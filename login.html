@@ -34,49 +34,52 @@
         <img src="public/globe.png" class="hero-globe login-globe" alt="Network Globe">
 
         <div class="login-wrapper">
-            <!-- First Section: Connect & Register 4-Step Verification Header -->
-            <section class="connect-register-section">
-                <div class="connect-header-row">
-                    <h1 class="connect-main-title">Connect & Register</h1>
-                    <span class="copper-accent-bar"></span>
-                </div>
-                <p class="connect-subtitle">Complete the below form to set up your a/c.</p>
-                <p class="connect-desc">Follow the 4 step verification sequence securely handled by smart contract configurations.</p>
-
-                <!-- 4-Step Process Tracker -->
-                <div class="step-tracker-row">
-                    <div class="step-node active" id="step-node-1" onclick="goToStep(1)">
-                        <div class="step-circle">
-                            <span>1</span>
-                        </div>
-                        <span class="step-title">Mentor ID</span>
-                    </div>
-
-                    <div class="step-node" id="step-node-2" onclick="goToStep(2)">
-                        <div class="step-circle">
-                            <span>2</span>
-                        </div>
-                        <span class="step-title">User Details</span>
-                    </div>
-
-                    <div class="step-node" id="step-node-3" onclick="goToStep(3)">
-                        <div class="step-circle">
-                            <span>3</span>
-                        </div>
-                        <span class="step-title">Approve</span>
-                    </div>
-
-                    <div class="step-node" id="step-node-4" onclick="goToStep(4)">
-                        <div class="step-circle">
-                            <span>4</span>
-                        </div>
-                        <span class="step-title">Register</span>
-                    </div>
-                </div>
-            </section>
-
             <!-- Card Container -->
             <div class="login-card">
+                <!-- Connect & Register Section Inside Card -->
+                <div class="connect-register-section">
+                    <div class="connect-header-row">
+                        <h1 class="connect-main-title">Connect & Register</h1>
+                        <span class="copper-accent-bar"></span>
+                    </div>
+                    <p class="connect-subtitle">Complete the below form to set up your a/c.</p>
+                    <p class="connect-desc">Follow the 4 step verification sequence securely handled by smart contract configurations.</p>
+
+                    <!-- 4-Step Process Tracker -->
+                    <div class="step-tracker-row">
+                        <div class="step-node active" id="step-node-1" onclick="goToStep(1)">
+                            <div class="step-circle">
+                                <span>1</span>
+                            </div>
+                            <span class="step-title">Mentor ID</span>
+                        </div>
+
+                        <div class="step-node" id="step-node-2" onclick="goToStep(2)">
+                            <div class="step-circle">
+                                <span>2</span>
+                            </div>
+                            <span class="step-title">User Details</span>
+                        </div>
+
+                        <div class="step-node" id="step-node-3" onclick="goToStep(3)">
+                            <div class="step-circle">
+                                <span>3</span>
+                            </div>
+                            <span class="step-title">Approve</span>
+                        </div>
+
+                        <div class="step-node" id="step-node-4" onclick="goToStep(4)">
+                            <div class="step-circle">
+                                <span>4</span>
+                            </div>
+                            <span class="step-title">Register</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-divider"></div>
+
+                <!-- Step 1: Mentor ID -->
                 <!-- Step 1: Mentor ID -->
                 <div class="step-panel active" id="step-panel-1">
                     <div class="login-card-header">
