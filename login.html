@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Connect & Register for PROFTZ 12-Slot FLOW Engine & USDT earnings platform. 4-step smart contract verification sequence.">
+    <meta name="description" content="PROFTZ is the premium USDT earnings platform built on the 12-Slots FLOW Engine — engineered for IBPs who demand real income, transparent systems, and infinite duplication.">
     <title>Connect & Register - PROFTZ FLOW Engine</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,7 +89,7 @@
                     <form onsubmit="proceedToStep(event, 2)" class="step1-form">
                         <!-- Mentor Username -->
                         <div class="form-group">
-                            <label for="mentor-username" class="form-label-caps">MENTOR USERNAME *</label>
+                            <label for="mentor-username" class="form-label-caps">MENTOR USERNAME &amp; ID*</label>
                             <input type="text" id="mentor-username" class="form-input-bordered" placeholder="e.g. john123" required>
                         </div>
 
@@ -293,6 +293,25 @@
             alert('Registration completed successfully! Welcome to PROFTZ FLOW Engine.');
             window.location.href = 'index.html';
         }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
+
+    <!-- ==========================================================================
+         MAIN FOOTER SECTION
+         ========================================================================== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-container">
+            <span class="footer-copyright">&copy; 2026 PROFTZ &middot; All Rights Reserved</span>
+            <button class="back-to-top-btn" onclick="scrollToTop()" aria-label="Scroll back to top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c89551" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="19" x2="12" y2="5"></line>
+                    <polyline points="5 12 12 5 19 12"></polyline>
+                </svg>
+            </button>
+        </div>
+    </footer>
 </body>
 </html>
