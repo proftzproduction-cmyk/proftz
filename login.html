@@ -188,20 +188,98 @@
                 <div class="step-panel" id="step-panel-2">
                     <div class="step-top-header">
                         <h2 class="step-main-heading">STEP 2: USER DETAILS</h2>
-                        <a href="#" class="signin-instead-link" onclick="goToStep(1)">&larr; Back to Step 1</a>
+                        <a href="#" onclick="toggleSignInPanel(event)" class="step-link-right">Sign In Instead &rarr;</a>
                     </div>
+
+                    <!-- Active Network Bar -->
+                    <div class="active-network-card">
+                        <div class="network-left">
+                            <div class="network-icon-box">
+                                <span class="green-live-dot"></span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2b9ee6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
+                            <div class="network-info-column">
+                                <span class="network-sublabel">• ACTIVE NETWORK</span>
+                                <span class="network-title">BNB Smart Chain Testnet</span>
+                            </div>
+                        </div>
+                        <div class="network-right">
+                            <span class="chain-label">CHAIN ID</span>
+                            <span class="chain-badge">#97</span>
+                        </div>
+                    </div>
+
+                    <!-- Required / Balance Row -->
+                    <div class="balance-info-card">
+                        <div class="bal-col-left">
+                            <div class="bal-label">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#72898f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                <span>REQUIRED</span>
+                            </div>
+                            <div class="bal-val"><span id="step2-req-amount">125</span> <span class="highlight-green">USDT</span></div>
+                        </div>
+                        <div class="bal-divider"></div>
+                        <div class="bal-col-right">
+                            <div class="bal-label">
+                                <span>YOUR BALANCE</span>
+                            </div>
+                            <div class="bal-val">
+                                <span>150.00.00</span> <span class="denom">USDT</span>
+                                <span class="green-live-dot-sm"></span>
+                            </div>
+                        </div>
+                    </div>
+
                     <form onsubmit="proceedToStep(event, 3)">
-                        <div class="form-group">
-                            <label for="reg-username" class="form-label-caps">PREFERRED USERNAME</label>
-                            <input type="text" id="reg-username" class="form-input-bordered" placeholder="Choose a username" required>
+                        <!-- Two Column Input Grid -->
+                        <div class="form-two-col-grid">
+                            <div class="form-group">
+                                <label for="reg-username" class="form-label-caps">USER NAME *</label>
+                                <input type="text" id="reg-username" class="form-input-bordered" value="arun_2026" required>
+                                <span class="input-valid-text">User name available.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-fullname" class="form-label-caps">FULL NAME *</label>
+                                <input type="text" id="reg-fullname" class="form-input-bordered" value="Arunesh Pandey" required>
+                            </div>
                         </div>
-                        <div class="form-group" style="margin-top: 14px;">
-                            <label for="reg-email" class="form-label-caps">EMAIL ADDRESS</label>
-                            <input type="email" id="reg-email" class="form-input-bordered" placeholder="name@domain.com" required>
+
+                        <div class="form-two-col-grid">
+                            <div class="form-group">
+                                <label for="reg-email" class="form-label-caps">EMAIL ADDRESS *</label>
+                                <input type="email" id="reg-email" class="form-input-bordered" value="lead1@gmail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-country" class="form-label-caps">COUNTRY *</label>
+                                <select id="reg-country" class="form-select-bordered" required>
+                                    <option value="IN" selected>India IN</option>
+                                    <option value="US">United States US</option>
+                                    <option value="UK">United Kingdom GB</option>
+                                    <option value="CA">Canada CA</option>
+                                    <option value="AE">United Arab Emirates AE</option>
+                                </select>
+                            </div>
                         </div>
-                        <button type="submit" class="btn-primary submit-btn" style="margin-top: 20px;">
-                            <span>Continue to Step 3: Approve &rarr;</span>
-                        </button>
+
+                        <!-- Mobile Field -->
+                        <div class="form-group" style="margin-bottom: 24px;">
+                            <label class="form-label-caps">MOBILE *</label>
+                            <div class="phone-input-group">
+                                <select id="phone-code" class="phone-code-select">
+                                    <option value="+91" selected>+91</option>
+                                    <option value="+1">+1</option>
+                                    <option value="+44">+44</option>
+                                    <option value="+971">+971</option>
+                                </select>
+                                <input type="tel" id="reg-mobile" class="phone-number-input" value="8787236912" required>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 Action Buttons -->
+                        <div class="step3-action-row">
+                            <button type="button" class="btn-step-back-green" onclick="goToStep(1)">&larr; Back</button>
+                            <button type="submit" class="btn-step-next-green">Next &rarr;</button>
+                        </div>
                     </form>
                 </div>
 

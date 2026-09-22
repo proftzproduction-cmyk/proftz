@@ -1849,9 +1849,175 @@ body {
     transform: translateY(-2px);
 }
 
+/* Step 2 User Details Styles */
+.balance-info-card {
+    display: flex;
+    align-items: center;
+    background: #091012;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 12px 20px;
+    margin-bottom: 22px;
+}
+
+.bal-col-left, .bal-col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bal-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 16px;
+}
+
+.bal-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9.5px;
+    font-weight: 800;
+    color: #72898f;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.bal-val {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bal-val .denom {
+    color: #72898f;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.green-live-dot-sm {
+    width: 6px;
+    height: 6px;
+    background: #5ded37;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #5ded37;
+    margin-left: 2px;
+}
+
+.form-two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.input-valid-text {
+    color: #5ded37;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 5px;
+    display: block;
+}
+
+.form-select-bordered {
+    width: 100%;
+    padding: 13px 16px;
+    background: #091012;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+}
+
+.phone-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.phone-code-select {
+    width: 90px;
+    padding: 13px 12px;
+    background: #091012;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.phone-number-input {
+    flex: 1;
+    padding: 13px 16px;
+    background: #091012;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+
+.phone-number-input:focus, .phone-code-select:focus, .form-select-bordered:focus {
+    border-color: #5ded37;
+    box-shadow: 0 0 12px rgba(93, 237, 55, 0.25);
+}
+
+.btn-step-back-green {
+    padding: 14px 24px;
+    background: #8ce62c;
+    border: none;
+    border-radius: 12px;
+    color: #040809;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-step-back-green:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+.btn-step-next-green {
+    padding: 14px 24px;
+    background: #8ce62c;
+    border: none;
+    border-radius: 12px;
+    color: #040809;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    box-shadow: 0 0 16px rgba(140, 230, 44, 0.35);
+}
+
+.btn-step-next-green:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 22px rgba(140, 230, 44, 0.55);
+}
+
 /* Responsive Package & Wallet Grids */
 @media (max-width: 600px) {
-    .package-grid {
+    .package-grid, .form-two-col-grid {
         grid-template-columns: 1fr;
     }
     .wallet-action-row {
