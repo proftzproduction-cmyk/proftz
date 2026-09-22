@@ -1770,6 +1770,19 @@ body {
     margin-bottom: 16px;
 }
 
+.register-success-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(140, 230, 44, 0.08);
+    border: 1.5px solid rgba(140, 230, 44, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    box-shadow: 0 0 16px rgba(140, 230, 44, 0.2);
+}
+
 .approve-card-title {
     font-size: 18px;
     font-weight: 700;

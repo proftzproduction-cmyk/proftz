@@ -329,10 +329,41 @@
                 <div class="step-panel" id="step-panel-4">
                     <div class="step-top-header">
                         <h2 class="step-main-heading">STEP 4: REGISTER</h2>
+                        <a href="#" onclick="toggleSignInPanel(event)" class="step-link-right">Sign In Instead &rarr;</a>
                     </div>
-                    <button type="button" class="btn-primary submit-btn" onclick="finishRegistration()">
-                        <span>Complete Registration & Register &rarr;</span>
-                    </button>
+
+                    <!-- Active Network Bar -->
+                    <div class="active-network-card">
+                        <div class="network-left">
+                            <div class="network-icon-box">
+                                <span class="green-live-dot"></span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2b9ee6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
+                            <div class="network-info-column">
+                                <span class="network-sublabel">• ACTIVE NETWORK</span>
+                                <span class="network-title">BNB Smart Chain Testnet</span>
+                            </div>
+                        </div>
+                        <div class="network-right">
+                            <span class="chain-label">CHAIN ID</span>
+                            <span class="chain-badge">#97</span>
+                        </div>
+                    </div>
+
+                    <!-- Allowance Approved Card -->
+                    <div class="approve-contract-box">
+                        <div class="register-success-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8ce62c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <h3 class="approve-card-title">Allowance Approved Successfully!</h3>
+                        <p class="approve-card-desc">Your token allocation is unlocked. Click below to complete your <span class="highlight-green" id="step4-deposit-text">125 USDT deposit</span> and register your account.</p>
+                    </div>
+
+                    <!-- Action Buttons Row -->
+                    <div class="step3-action-row">
+                        <button type="button" class="btn-step-back-green" onclick="goToStep(3)">&larr; Back</button>
+                        <button type="button" class="btn-step-next-green" onclick="finishRegistration()">Deposit &amp; Register</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -375,16 +406,22 @@
             const boxRetail = document.getElementById('pkg-retail');
             const amtText = document.getElementById('approve-amount-text');
             const amtPill = document.getElementById('approve-pill-amount');
+            const step2Req = document.getElementById('step2-req-amount');
+            const step4Dep = document.getElementById('step4-deposit-text');
             if (pkg === 'ibp') {
                 boxIbp.classList.add('active');
                 boxRetail.classList.remove('active');
                 if (amtText) amtText.innerText = '125 USDT';
                 if (amtPill) amtPill.innerText = '125 USDT';
+                if (step2Req) step2Req.innerText = '125';
+                if (step4Dep) step4Dep.innerText = '125 USDT deposit';
             } else {
                 boxRetail.classList.add('active');
                 boxIbp.classList.remove('active');
                 if (amtText) amtText.innerText = '150 USDT';
                 if (amtPill) amtPill.innerText = '150 USDT';
+                if (step2Req) step2Req.innerText = '150';
+                if (step4Dep) step4Dep.innerText = '150 USDT deposit';
             }
         }
 
