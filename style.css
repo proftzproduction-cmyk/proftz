@@ -2094,18 +2094,142 @@ body {
                 linear-gradient(135deg, #f3b664 0%, #ffffff 30%, #d3833b 70%, #f3b664 100%) border-box;
 }
 
-/* Responsive Package & Wallet Grids */
+/* Responsive Package, Form Grids & Login Components */
+@media (max-width: 900px) {
+    .login-card {
+        padding: 30px 24px;
+    }
+    .connect-main-title {
+        font-size: clamp(26px, 5vw, 36px);
+    }
+}
+
 @media (max-width: 600px) {
+    .login-container {
+        padding: 15px 12px 60px 12px;
+    }
+    .login-card {
+        padding: 22px 14px;
+        border-radius: 16px;
+    }
+    .connect-register-section {
+        margin-bottom: 24px;
+    }
+    .connect-header-row {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .connect-main-title {
+        font-size: 26px;
+    }
+    .copper-accent-bar {
+        width: 55px;
+        height: 3px;
+    }
+    .connect-subtitle {
+        font-size: 14px;
+    }
+    .connect-desc {
+        font-size: 12.5px;
+        margin-bottom: 20px;
+    }
+    .step-tracker-row {
+        gap: 4px;
+    }
+    .step-circle {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+    .step-title {
+        font-size: 10.5px;
+    }
+    .step-top-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .step-main-heading {
+        font-size: 18px;
+    }
     .package-grid, .form-two-col-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
     .wallet-action-row {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .token-selector-row {
+        gap: 10px;
+    }
+    .token-btn {
+        padding: 12px 14px;
+        font-size: 13.5px;
     }
     .ibp-details-divider {
         flex-direction: column;
         gap: 6px;
         text-align: center;
+        margin: 24px 0 18px 0;
+    }
+    .active-network-card {
+        padding: 10px 14px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .balance-info-card {
+        padding: 10px 14px;
+    }
+    .bal-val {
+        font-size: 13px;
+    }
+    .bal-divider {
+        margin: 0 8px;
+    }
+    .approve-contract-box {
+        padding: 24px 14px;
+        margin-bottom: 18px;
+    }
+    .approve-card-title {
+        font-size: 16px;
+    }
+    .approve-card-desc {
+        font-size: 12px;
+    }
+    .btn-copper-shine-action, .btn-step-back, .btn-step-back-green, .btn-step-next-green {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .login-card {
+        padding: 16px 10px;
+    }
+    .step-circle {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+    .step-title {
+        font-size: 9px;
+    }
+    .connect-main-title {
+        font-size: 22px;
+    }
+    .btn-copper-shine-action, .btn-step-back, .btn-step-back-green {
+        padding: 11px 10px;
+        font-size: 13px;
+    }
+    .phone-code-select {
+        width: 75px;
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+    .phone-number-input {
+        padding: 12px 10px;
+        font-size: 13px;
     }
 }
 
