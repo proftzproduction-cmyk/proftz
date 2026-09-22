@@ -964,14 +964,73 @@ body {
 .login-card {
     position: relative;
     width: 100%;
-    max-width: 620px;
+    max-width: 1060px;
     background: linear-gradient(180deg, #041208 0%, #010603 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.3) 0%, rgba(255, 220, 170, 0.9) 20%, rgba(210, 121, 49, 0.35) 45%, rgba(255, 235, 195, 0.95) 70%, rgba(210, 121, 49, 0.3) 100%) border-box;
     border: 2px solid transparent;
     border-radius: 20px;
-    padding: 36px 32px;
+    padding: 0;
     box-shadow: 0 16px 45px rgba(0, 0, 0, 0.95), inset 0 1px 2px rgba(255, 220, 170, 0.3);
     z-index: 2;
+    overflow: hidden;
+}
+
+.login-split-card {
+    display: grid;
+    grid-template-columns: 340px 1px 1fr;
+}
+
+.login-sidebar-left {
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #030c0e 0%, #010607 100%);
+}
+
+.sidebar-logo-box {
+    margin-bottom: 24px;
+}
+
+.sidebar-logo-img {
+    height: 48px;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+.sidebar-text-block {
+    margin-bottom: 24px;
+}
+
+.login-split-divider {
+    width: 1px;
+    background: linear-gradient(180deg, transparent 0%, rgba(210, 121, 49, 0.3) 20%, rgba(210, 121, 49, 0.3) 80%, transparent 100%);
+}
+
+.login-content-right {
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-sidebar-left .step-tracker-row {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.login-sidebar-left .step-circle {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+}
+
+.login-sidebar-left .step-title {
+    font-size: 9.5px;
 }
 
 .card-divider {
@@ -2039,6 +2098,24 @@ body {
 .btn-step-next-green:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 22px rgba(140, 230, 44, 0.55);
+}
+
+@media (max-width: 900px) {
+    .login-split-card {
+        grid-template-columns: 1fr !important;
+        max-width: 600px !important;
+    }
+    .login-split-divider {
+        display: none !important;
+    }
+    .login-sidebar-left {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 24px 20px !important;
+    }
+    .login-content-right {
+        padding: 24px 20px !important;
+    }
 }
 
 /* Responsive Package & Wallet Grids */
