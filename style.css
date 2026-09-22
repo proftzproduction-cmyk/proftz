@@ -1892,46 +1892,11 @@ body {
     margin-left: 4px;
 }
 
+/* Action Buttons Row Base */
 .step3-action-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-}
-
-.btn-step-back {
-    padding: 14px 24px;
-    background: #8ce62c;
-    border: none;
-    border-radius: 12px;
-    color: #040809;
-    font-size: 15px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.btn-step-back:hover {
-    transform: translateY(-2px);
-    opacity: 0.92;
-}
-
-.btn-step-approve {
-    padding: 14px 24px;
-    background: #141e21;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 12px;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.btn-step-approve:hover {
-    background: #1d2c31;
-    border-color: #8ce62c;
-    color: #8ce62c;
-    transform: translateY(-2px);
 }
 
 /* Step 2 User Details Styles */
@@ -2065,40 +2030,86 @@ body {
     box-shadow: 0 0 12px rgba(93, 237, 55, 0.25);
 }
 
+/* Copper Stroked Shining Effect Action Buttons */
+.btn-copper-stroke-action,
+.btn-copper-primary,
+.btn-copper-secondary,
+.btn-step-next-green,
+.btn-step-approve,
+.btn-step-back,
 .btn-step-back-green {
+    position: relative;
     padding: 14px 24px;
-    background: #8ce62c;
-    border: none;
-    border-radius: 12px;
-    color: #040809;
+    background: linear-gradient(180deg, #1c120a 0%, #0e0904 100%) padding-box,
+                linear-gradient(135deg, #b86b29 0%, #ffe3b3 25%, #d3833b 50%, #fff2db 75%, #b86b29 100%) border-box;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    color: #fcae52;
     font-size: 15px;
     font-weight: 800;
+    letter-spacing: 0.5px;
     cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.95), 0 0 18px rgba(210, 121, 49, 0.35), inset 0 1px 2px rgba(255, 227, 179, 0.3);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
 }
 
+/* Secondary Back Button Variant - Subtle Darker Copper Stroke */
+.btn-copper-secondary,
+.btn-step-back,
+.btn-step-back-green {
+    background: linear-gradient(180deg, #120b06 0%, #070402 100%) padding-box,
+                linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 227, 179, 0.75) 50%, rgba(210, 121, 49, 0.45) 100%) border-box;
+    color: #d3833b;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.85), 0 0 12px rgba(210, 121, 49, 0.25), inset 0 1px 2px rgba(255, 220, 170, 0.2);
+}
+
+/* Shining Reflection Light Beam Effect */
+.btn-copper-stroke-action::after,
+.btn-copper-primary::after,
+.btn-copper-secondary::after,
+.btn-step-next-green::after,
+.btn-step-approve::after,
+.btn-step-back::after,
+.btn-step-back-green::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -120%;
+    width: 70%;
+    height: 200%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 240, 215, 0.2) 30%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 240, 215, 0.2) 70%, transparent 100%);
+    transform: rotate(25deg);
+    animation: copperShineSweep 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    pointer-events: none;
+}
+
+@keyframes copperShineSweep {
+    0% { left: -120%; opacity: 0; }
+    20% { opacity: 1; }
+    50% { left: 140%; opacity: 0.9; }
+    100% { left: 140%; opacity: 0; }
+}
+
+.btn-copper-stroke-action:hover,
+.btn-copper-primary:hover,
+.btn-copper-secondary:hover,
+.btn-step-next-green:hover,
+.btn-step-approve:hover,
+.btn-step-back:hover,
 .btn-step-back-green:hover {
     transform: translateY(-2px);
-    opacity: 0.92;
+    background: linear-gradient(180deg, #2a1b0e 0%, #150d05 100%) padding-box,
+                linear-gradient(135deg, #ffd89b 0%, #e59747 30%, #fff0d4 70%, #d3833b 100%) border-box;
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.95), 0 0 28px rgba(210, 121, 49, 0.65), inset 0 1px 2px rgba(255, 235, 195, 0.5);
 }
 
-.btn-step-next-green {
-    padding: 14px 24px;
-    background: #8ce62c;
-    border: none;
-    border-radius: 12px;
-    color: #040809;
-    font-size: 15px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    box-shadow: 0 0 16px rgba(140, 230, 44, 0.35);
-}
-
-.btn-step-next-green:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 22px rgba(140, 230, 44, 0.55);
-}
 
 @media (max-width: 900px) {
     .login-split-card {
