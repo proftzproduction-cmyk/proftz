@@ -73,7 +73,7 @@
 
     <main class="hero-banner">
         <img src="public/design overlay.png" class="hero-design-overlay" alt="Design Overlay">
-        <img src="public/globe.png" class="hero-globe" alt="Network Globe">
+        <canvas id="heroGlobeCanvas" class="hero-globe" width="636" height="819"></canvas>
         <div class="market-candles-wrapper">
             <svg class="market-candles-svg" viewBox="0 0 450 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -245,7 +245,7 @@
                     <div class="core-badge">THE CORE SYSTEM</div>
                     <h2 class="core-title">The Slots <span class="green-gradient-text">Flow Engine</span></h2>
                     <p class="core-description">
-                        Your Slots Flow Engine is the heart of your business. Every slot filled earns you USDT / USDC. When it completes a wave, it Reflows, re-entering automatically to multiply your earnings.
+                        Your 12 Slots Flow Engine is the heart of your business. Every slot filled earns you USDT / USDC. When it completes a wave, it Reflows, re-entering automatically to multiply your earnings.
                     </p>
 
                     <div class="feature-list">
@@ -258,7 +258,7 @@
                             </div>
                             <div class="feature-text">
                                 <h3 class="feature-title">Automatic Reflow</h3>
-                                <p class="feature-desc">When all slots are completed, your Flow Wave re-enters the top slot automatically.</p>
+                                <p class="feature-desc">When all 12 slots are completed, your Flow Wave re-enters the top slot automatically.</p>
                             </div>
                         </div>
 
@@ -866,5 +866,6 @@
             </button>
         </div>
     </footer>
+    <script src="js/hero-globe.js"></script>
 </body>
 </html>
