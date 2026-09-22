@@ -1323,17 +1323,30 @@ body {
     margin: 0;
 }
 
-.signin-instead-link {
-    color: #c89551;
-    font-size: 13px;
-    font-weight: 600;
+.btn-copper-stroke, .signin-instead-link, .step-link-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: linear-gradient(180deg, rgba(20, 14, 10, 0.6) 0%, rgba(10, 7, 5, 0.8) 100%);
+    border: 1px solid rgba(210, 121, 49, 0.7);
+    border-radius: 20px;
+    color: #e2a868;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
     text-decoration: none;
-    transition: color 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 200, 140, 0.15);
+    transition: all 0.25s ease;
 }
 
-.signin-instead-link:hover {
-    color: #5ded37;
-    text-decoration: underline;
+.btn-copper-stroke:hover, .signin-instead-link:hover, .step-link-right:hover {
+    background: linear-gradient(180deg, rgba(35, 22, 12, 0.85) 0%, rgba(20, 12, 6, 0.95) 100%);
+    border-color: #f3b664;
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(211, 131, 59, 0.45), inset 0 1px 2px rgba(255, 220, 160, 0.3);
+    transform: translateY(-1px);
+    text-decoration: none;
 }
 
 .form-label-caps {
