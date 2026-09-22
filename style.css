@@ -2047,6 +2047,53 @@ body {
     box-shadow: 0 0 22px rgba(140, 230, 44, 0.55);
 }
 
+/* Copper Stroke Shine Action Button */
+.btn-copper-shine-action {
+    position: relative;
+    padding: 14px 24px;
+    background: linear-gradient(180deg, #18100a 0%, #0d0805 100%) padding-box,
+                linear-gradient(135deg, #d3833b 0%, #f7c98b 25%, #8a4819 50%, #f3b664 75%, #d3833b 100%) border-box;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    color: #f7c98b;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8), 0 0 16px rgba(211, 131, 59, 0.35);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-copper-shine-action::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 235, 195, 0.5) 50%, transparent 100%);
+    transform: rotate(25deg);
+    animation: copperShineSweep 3.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes copperShineSweep {
+    0% { left: -75%; }
+    30%, 100% { left: 125%; }
+}
+
+.btn-copper-shine-action:hover {
+    transform: translateY(-2px);
+    color: #ffffff;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.95), 0 0 25px rgba(243, 182, 100, 0.65);
+    background: linear-gradient(180deg, #26180f 0%, #150d07 100%) padding-box,
+                linear-gradient(135deg, #f3b664 0%, #ffffff 30%, #d3833b 70%, #f3b664 100%) border-box;
+}
+
 /* Responsive Package & Wallet Grids */
 @media (max-width: 600px) {
     .package-grid, .form-two-col-grid {
