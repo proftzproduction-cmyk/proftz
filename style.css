@@ -1662,6 +1662,193 @@ body {
     color: #ffffff;
 }
 
+/* Step 3 Approve Styles */
+.active-network-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #091012;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+}
+
+.network-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.network-icon-box {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #111c20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.green-live-dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background: #5ded37;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #5ded37;
+}
+
+.network-info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.network-sublabel {
+    font-size: 9.5px;
+    font-weight: 800;
+    color: #72898f;
+    letter-spacing: 0.8px;
+}
+
+.network-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.network-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.chain-label {
+    font-size: 9px;
+    font-weight: 800;
+    color: #72898f;
+    letter-spacing: 0.8px;
+}
+
+.chain-badge {
+    background: rgba(93, 237, 55, 0.15);
+    color: #5ded37;
+    border: 1px solid rgba(93, 237, 55, 0.3);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.approve-contract-box {
+    background: #080d0f;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 36px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.approve-warning-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(140, 230, 44, 0.08);
+    border: 1px solid rgba(140, 230, 44, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.approve-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.approve-card-desc {
+    font-size: 13px;
+    color: #9ba8ab;
+    line-height: 1.55;
+    max-width: 440px;
+    margin-bottom: 20px;
+}
+
+.highlight-green {
+    color: #8ce62c;
+    font-weight: 700;
+}
+
+.approve-pill {
+    display: inline-flex;
+    align-items: center;
+    background: #0d171a;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #d5d9d8;
+}
+
+.approve-pill span {
+    color: #8ce62c;
+    margin-left: 4px;
+}
+
+.step3-action-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.btn-step-back {
+    padding: 14px 24px;
+    background: #8ce62c;
+    border: none;
+    border-radius: 12px;
+    color: #040809;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-step-back:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+.btn-step-approve {
+    padding: 14px 24px;
+    background: #141e21;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-step-approve:hover {
+    background: #1d2c31;
+    border-color: #8ce62c;
+    color: #8ce62c;
+    transform: translateY(-2px);
+}
+
 /* Responsive Package & Wallet Grids */
 @media (max-width: 600px) {
     .package-grid {

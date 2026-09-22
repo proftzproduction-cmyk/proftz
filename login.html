@@ -208,16 +208,43 @@
                 <!-- Step 3: Approve -->
                 <div class="step-panel" id="step-panel-3">
                     <div class="step-top-header">
-                        <h2 class="step-main-heading">STEP 3: APPROVE SMART CONTRACT</h2>
+                        <h2 class="step-main-heading">STEP 3: APPROVE</h2>
+                        <a href="#" onclick="toggleSignInPanel(event)" class="step-link-right">Sign In Instead &rarr;</a>
                     </div>
-                    <div class="approve-info-box">
-                        <div class="info-row"><span>Network:</span> <strong>BNB Smart Chain (BEP-20)</strong></div>
-                        <div class="info-row"><span>Token:</span> <strong>USDT (Tether)</strong></div>
-                        <div class="info-row"><span>Status:</span> <span class="status-verified">&check; Verified Smart Contract</span></div>
+
+                    <!-- Active Network Bar -->
+                    <div class="active-network-card">
+                        <div class="network-left">
+                            <div class="network-icon-box">
+                                <span class="green-live-dot"></span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2b9ee6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
+                            <div class="network-info-column">
+                                <span class="network-sublabel">• ACTIVE NETWORK</span>
+                                <span class="network-title">BNB Smart Chain Testnet</span>
+                            </div>
+                        </div>
+                        <div class="network-right">
+                            <span class="chain-label">CHAIN ID</span>
+                            <span class="chain-badge">#97</span>
+                        </div>
                     </div>
-                    <button type="button" class="btn-primary submit-btn" onclick="goToStep(4)">
-                        <span>Approve Allowance &rarr;</span>
-                    </button>
+
+                    <!-- Approve Contract Allowance Box -->
+                    <div class="approve-contract-box">
+                        <div class="approve-warning-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8ce62c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </div>
+                        <h3 class="approve-card-title">Approve Contract Allowance</h3>
+                        <p class="approve-card-desc">Please approve the <span class="highlight-green" id="approve-amount-text">125 USDT</span> token allowance to proceed with your purchase &amp; unlock account registration.</p>
+                        <div class="approve-pill">Required: <span id="approve-pill-amount">125 USDT</span></div>
+                    </div>
+
+                    <!-- Action Buttons Row -->
+                    <div class="step3-action-row">
+                        <button type="button" class="btn-step-back" onclick="goToStep(2)">&larr; Back</button>
+                        <button type="button" class="btn-step-approve" onclick="goToStep(4)">Approve</button>
+                    </div>
                 </div>
 
                 <!-- Step 4: Register -->
@@ -268,12 +295,18 @@
         function selectPackage(pkg) {
             const boxIbp = document.getElementById('pkg-ibp');
             const boxRetail = document.getElementById('pkg-retail');
+            const amtText = document.getElementById('approve-amount-text');
+            const amtPill = document.getElementById('approve-pill-amount');
             if (pkg === 'ibp') {
                 boxIbp.classList.add('active');
                 boxRetail.classList.remove('active');
+                if (amtText) amtText.innerText = '125 USDT';
+                if (amtPill) amtPill.innerText = '125 USDT';
             } else {
                 boxRetail.classList.add('active');
                 boxIbp.classList.remove('active');
+                if (amtText) amtText.innerText = '150 USDT';
+                if (amtPill) amtPill.innerText = '150 USDT';
             }
         }
 
