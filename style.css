@@ -850,7 +850,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 680px;
+    max-width: 880px;
     z-index: 2;
 }
 
@@ -900,7 +900,7 @@ body {
     color: #a0a5a8;
     line-height: 1.55;
     margin-bottom: 28px;
-    max-width: 580px;
+    max-width: 760px;
 }
 
 /* 4-Step Tracker Row */
@@ -909,7 +909,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    max-width: 560px;
+    max-width: 680px;
     position: relative;
 }
 
@@ -970,12 +970,12 @@ body {
 .login-card {
     position: relative;
     width: 100%;
-    max-width: 620px;
+    max-width: 860px;
     background: linear-gradient(180deg, #041208 0%, #010603 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.3) 0%, rgba(255, 220, 170, 0.9) 20%, rgba(210, 121, 49, 0.35) 45%, rgba(255, 235, 195, 0.95) 70%, rgba(210, 121, 49, 0.3) 100%) border-box;
     border: 2px solid transparent;
     border-radius: 20px;
-    padding: 36px 32px;
+    padding: 38px 40px;
     box-shadow: 0 16px 45px rgba(0, 0, 0, 0.95), inset 0 1px 2px rgba(255, 220, 170, 0.3);
     z-index: 2;
 }
