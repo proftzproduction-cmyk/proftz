@@ -2420,47 +2420,24 @@ body {
 }
 
 /* ==========================================================================
-   LOCKED SLOT INACTIVE STYLING (DULL MUTED BACKGROUND)
+   LOCKED SLOT STYLING (PRESERVES SOLID BACKGROUND COLORS)
    ========================================================================== */
 .slot-card.locked {
-    background: linear-gradient(180deg, #05080a 0%, #020405 100%) padding-box,
-                linear-gradient(135deg, rgba(210, 121, 49, 0.18) 0%, rgba(255, 220, 170, 0.4) 25%, rgba(210, 121, 49, 0.18) 50%, rgba(255, 220, 170, 0.4) 75%, rgba(210, 121, 49, 0.18) 100%) border-box !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6) !important;
-    opacity: 0.55 !important;
-    filter: grayscale(0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    opacity: 0.95;
 }
 
 .slot-card.locked:hover {
-    opacity: 0.85 !important;
-    filter: grayscale(0.2);
-}
-
-.slot-card.locked .slot-header {
-    color: #61676a !important;
-}
-
-.slot-card.locked .slot-status-dot {
-    background: #23282b !important;
-    box-shadow: none !important;
-}
-
-.slot-card.locked .slot-value {
-    color: #4b5154 !important;
-    text-shadow: none !important;
-}
-
-.slot-card.locked .slot-status-text {
-    color: #3f4447 !important;
-    font-weight: 500 !important;
+    opacity: 1;
 }
 
 /* ==========================================================================
-   INDIVIDUAL SLOTS COLOR TINTED BACKGROUNDS & COPPER STROKES
+   INDIVIDUAL SLOTS SOLID COLOR BACKGROUNDS & COPPER STROKES
    ========================================================================== */
 
-/* Slot 1: ORANGE TINT */
+/* Slot 1: ORANGE SOLID BACKGROUND */
 .slot-card.slot-1 {
-    background: linear-gradient(180deg, rgba(40, 16, 3, 0.88) 0%, rgba(16, 6, 1, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(50, 20, 4, 0.92) 0%, rgba(22, 8, 2, 0.96) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
 .slot-card.slot-1 .slot-header { color: #ffb880; }
@@ -2468,9 +2445,9 @@ body {
 .slot-card.slot-1 .slot-value { color: #ff9933; text-shadow: 0 0 10px rgba(255, 128, 0, 0.5); }
 .slot-card.slot-1 .slot-status-text { color: #ff9933; }
 
-/* Slot 2: BLUE TINT */
+/* Slot 2: BLUE SOLID BACKGROUND */
 .slot-card.slot-2 {
-    background: linear-gradient(180deg, rgba(4, 25, 52, 0.88) 0%, rgba(1, 9, 20, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(5, 32, 68, 0.92) 0%, rgba(2, 12, 28, 0.96) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
 .slot-card.slot-2 .slot-header { color: #80c4ff; }
@@ -2478,19 +2455,19 @@ body {
 .slot-card.slot-2 .slot-value { color: #33a3ff; text-shadow: 0 0 10px rgba(0, 140, 255, 0.5); }
 .slot-card.slot-2 .slot-status-text { color: #33a3ff; }
 
-/* Slot 3: GREEN TINT */
+/* Slot 3: GREEN SOLID BACKGROUND */
 .slot-card.slot-3 {
-    background: linear-gradient(180deg, rgba(10, 42, 16, 0.88) 0%, rgba(3, 16, 6, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(12, 52, 20, 0.92) 0%, rgba(4, 20, 8, 0.96) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
 .slot-card.slot-3 .slot-header { color: #a4f58c; }
 .slot-card.slot-3 .slot-status-dot { background: #5ded37; box-shadow: 0 0 10px #5ded37; }
 .slot-card.slot-3 .slot-value { color: #5ded37; text-shadow: 0 0 12px rgba(93, 237, 55, 0.6); }
-.slot-card.slot-3 .slot-status-text { color: #5ded37; font-weight: 700; }
+.slot-card.slot-3 .slot-status-text { color: #5ded37; }
 
-/* Slot 4: PURPLE TINT */
+/* Slot 4: PURPLE SOLID BACKGROUND */
 .slot-card.slot-4 {
-    background: linear-gradient(180deg, rgba(32, 10, 52, 0.88) 0%, rgba(12, 3, 22, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(45, 14, 72, 0.92) 0%, rgba(18, 5, 30, 0.96) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
 .slot-card.slot-4 .slot-header { color: #d8b4fe; }
@@ -2498,9 +2475,9 @@ body {
 .slot-card.slot-4 .slot-value { color: #c084fc; text-shadow: 0 0 10px rgba(168, 85, 247, 0.5); }
 .slot-card.slot-4 .slot-status-text { color: #c084fc; }
 
-/* Slot 5: RED TINT */
+/* Slot 5: RED SOLID BACKGROUND */
 .slot-card.slot-5 {
-    background: linear-gradient(180deg, rgba(48, 10, 10, 0.88) 0%, rgba(18, 3, 3, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(65, 12, 12, 0.92) 0%, rgba(25, 4, 4, 0.96) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
 .slot-card.slot-5 .slot-header { color: #fca5a5; }
@@ -2508,9 +2485,9 @@ body {
 .slot-card.slot-5 .slot-value { color: #f87171; text-shadow: 0 0 10px rgba(239, 68, 68, 0.5); }
 .slot-card.slot-5 .slot-status-text { color: #f87171; }
 
-/* Slot 6: YELLOW TINT */
+/* Slot 6: YELLOW SOLID BACKGROUND */
 .slot-card.slot-6 {
-    background: linear-gradient(180deg, rgba(45, 34, 8, 0.88) 0%, rgba(18, 14, 3, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(60, 46, 8, 0.92) 0%, rgba(24, 18, 3, 0.96) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
 .slot-card.slot-6 .slot-header { color: #fde047; }
@@ -2518,19 +2495,19 @@ body {
 .slot-card.slot-6 .slot-value { color: #facc15; text-shadow: 0 0 10px rgba(234, 179, 8, 0.5); }
 .slot-card.slot-6 .slot-status-text { color: #facc15; }
 
-/* Slot 7: MAROON TINT */
+/* Slot 7: MAROON SOLID BACKGROUND */
 .slot-card.slot-7 {
-    background: linear-gradient(180deg, rgba(42, 8, 18, 0.88) 0%, rgba(18, 3, 8, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(58, 8, 22, 0.92) 0%, rgba(24, 3, 9, 0.96) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
-.slot-card.slot-7 .slot-header { color: #fca5a5; }
-.slot-card.slot-7 .slot-status-dot { background: #b91c1c; box-shadow: 0 0 8px #b91c1c; }
-.slot-card.slot-7 .slot-value { color: #ef4444; text-shadow: 0 0 10px rgba(185, 28, 28, 0.5); }
-.slot-card.slot-7 .slot-status-text { color: #ef4444; }
+.slot-card.slot-7 .slot-header { color: #f87171; }
+.slot-card.slot-7 .slot-status-dot { background: #991b1b; box-shadow: 0 0 8px #991b1b; }
+.slot-card.slot-7 .slot-value { color: #dc2626; text-shadow: 0 0 10px rgba(153, 27, 27, 0.5); }
+.slot-card.slot-7 .slot-status-text { color: #dc2626; }
 
-/* Slot 8: MAGENTA TINT */
+/* Slot 8: MAGENTA SOLID BACKGROUND */
 .slot-card.slot-8 {
-    background: linear-gradient(180deg, rgba(45, 8, 38, 0.88) 0%, rgba(18, 3, 15, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(62, 10, 52, 0.92) 0%, rgba(25, 4, 21, 0.96) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
 .slot-card.slot-8 .slot-header { color: #fbcfe8; }
@@ -2538,9 +2515,9 @@ body {
 .slot-card.slot-8 .slot-value { color: #f472b6; text-shadow: 0 0 10px rgba(236, 72, 153, 0.5); }
 .slot-card.slot-8 .slot-status-text { color: #f472b6; }
 
-/* Slot 9: OLIVE GREEN TINT */
+/* Slot 9: OLIVE GREEN SOLID BACKGROUND */
 .slot-card.slot-9 {
-    background: linear-gradient(180deg, rgba(28, 40, 8, 0.88) 0%, rgba(11, 16, 3, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(38, 52, 10, 0.92) 0%, rgba(15, 21, 4, 0.96) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
 .slot-card.slot-9 .slot-header { color: #bef264; }
@@ -2548,9 +2525,9 @@ body {
 .slot-card.slot-9 .slot-value { color: #a3e635; text-shadow: 0 0 10px rgba(132, 204, 22, 0.5); }
 .slot-card.slot-9 .slot-status-text { color: #a3e635; }
 
-/* Slot 10: CHARCOAL GREY TINT */
+/* Slot 10: CHARCOAL GREY SOLID BACKGROUND */
 .slot-card.slot-10 {
-    background: linear-gradient(180deg, rgba(28, 35, 42, 0.88) 0%, rgba(11, 14, 17, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(36, 42, 50, 0.92) 0%, rgba(15, 18, 22, 0.96) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
 .slot-card.slot-10 .slot-header { color: #cbd5e1; }
@@ -2558,25 +2535,25 @@ body {
 .slot-card.slot-10 .slot-value { color: #cbd5e1; text-shadow: 0 0 10px rgba(148, 163, 184, 0.4); }
 .slot-card.slot-10 .slot-status-text { color: #cbd5e1; }
 
-/* Slot 11: SILVER TINT */
+/* Slot 11: SILVER SOLID BACKGROUND */
 .slot-card.slot-11 {
-    background: linear-gradient(180deg, rgba(38, 46, 56, 0.88) 0%, rgba(16, 20, 25, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(95, 110, 130, 0.95) 0%, rgba(40, 48, 58, 0.98) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
-.slot-card.slot-11 .slot-header { color: #e2e8f0; }
-.slot-card.slot-11 .slot-status-dot { background: #ffffff; box-shadow: 0 0 8px #ffffff; }
-.slot-card.slot-11 .slot-value { color: #ffffff; text-shadow: 0 0 12px rgba(255, 255, 255, 0.6); }
+.slot-card.slot-11 .slot-header { color: #f8fafc; }
+.slot-card.slot-11 .slot-status-dot { background: #ffffff; box-shadow: 0 0 12px #ffffff, 0 0 4px #e2e8f0; }
+.slot-card.slot-11 .slot-value { color: #ffffff; text-shadow: 0 0 14px rgba(255, 255, 255, 0.85); }
 .slot-card.slot-11 .slot-status-text { color: #e2e8f0; }
 
-/* Slot 12: GOLD TINT */
+/* Slot 12: GOLD SOLID BACKGROUND */
 .slot-card.slot-12 {
-    background: linear-gradient(180deg, rgba(48, 35, 8, 0.88) 0%, rgba(20, 15, 3, 0.95) 100%) padding-box,
+    background: linear-gradient(180deg, rgba(85, 62, 12, 0.95) 0%, rgba(35, 25, 4, 0.98) 100%) padding-box,
                 linear-gradient(135deg, rgba(210, 121, 49, 0.45) 0%, rgba(255, 220, 170, 0.95) 25%, rgba(210, 121, 49, 0.45) 50%, rgba(255, 235, 195, 0.95) 75%, rgba(210, 121, 49, 0.45) 100%) border-box !important;
 }
-.slot-card.slot-12 .slot-header { color: #ffe066; }
-.slot-card.slot-12 .slot-status-dot { background: #ffd700; box-shadow: 0 0 10px #ffd700; }
-.slot-card.slot-12 .slot-value { color: #ffd700; text-shadow: 0 0 14px rgba(255, 215, 0, 0.7); }
-.slot-card.slot-12 .slot-status-text { color: #ffd700; font-weight: 700; }
+.slot-card.slot-12 .slot-header { color: #ffe57f; }
+.slot-card.slot-12 .slot-status-dot { background: #ffd700; box-shadow: 0 0 12px #ffd700, 0 0 4px #ffc107; }
+.slot-card.slot-12 .slot-value { color: #ffd700; text-shadow: 0 0 16px rgba(255, 215, 0, 0.85); }
+.slot-card.slot-12 .slot-status-text { color: #ffd700; }
 
 /* Bottom Summary Bar */
 .slots-summary-bar {
@@ -2603,16 +2580,6 @@ body {
     font-weight: 800;
 }
 
-.summary-value.green {
-    color: #5ded37;
-    text-shadow: 0 0 10px rgba(93, 237, 55, 0.4);
-}
-
-.summary-value.purple {
-    color: #c084fc;
-    text-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
-}
-
 .summary-value.orange {
     color: #ff9933;
     text-shadow: 0 0 10px rgba(255, 128, 0, 0.5);
@@ -2621,6 +2588,16 @@ body {
 .summary-value.blue {
     color: #33a3ff;
     text-shadow: 0 0 10px rgba(0, 140, 255, 0.5);
+}
+
+.summary-value.green {
+    color: #5ded37;
+    text-shadow: 0 0 10px rgba(93, 237, 55, 0.4);
+}
+
+.summary-value.purple {
+    color: #c084fc;
+    text-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
 }
 
 .summary-value.red {
@@ -2644,8 +2621,8 @@ body {
 }
 
 .summary-value.maroon {
-    color: #ef4444;
-    text-shadow: 0 0 10px rgba(185, 28, 28, 0.5);
+    color: #dc2626;
+    text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
 }
 
 .summary-value.magenta {
@@ -3280,50 +3257,50 @@ body {
     transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
 }
 
-/* Badge Color Adapters for Progress Fills */
+/* Badge Color Adapters for Progress Fills (Darker Solid Colors Matching Lapel Pins) */
 .rank-fill-ibp {
-    background: linear-gradient(90deg, #94a3b8 0%, #e2e8f0 50%, #ffffff 100%);
-    box-shadow: 0 0 12px rgba(226, 232, 240, 0.9);
+    background: #808c9c;
+    box-shadow: 0 0 6px rgba(128, 140, 156, 0.4);
 }
 
 .rank-fill-reg {
-    background: linear-gradient(90deg, #c2651b 0%, #d3833b 50%, #f9a826 100%);
-    box-shadow: 0 0 12px rgba(211, 131, 59, 0.9);
+    background: #b85c14;
+    box-shadow: 0 0 6px rgba(184, 92, 20, 0.4);
 }
 
 .rank-fill-int {
-    background: linear-gradient(90deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%);
-    box-shadow: 0 0 12px rgba(59, 130, 246, 0.9);
+    background: #1d4ed8;
+    box-shadow: 0 0 6px rgba(29, 78, 216, 0.4);
 }
 
 .rank-fill-dir {
-    background: linear-gradient(90deg, #15803d 0%, #22c55e 50%, #5ded37 100%);
-    box-shadow: 0 0 12px rgba(93, 237, 55, 0.9);
+    background: #15803d;
+    box-shadow: 0 0 6px rgba(21, 128, 61, 0.4);
 }
 
 .rank-fill-rmd {
-    background: linear-gradient(90deg, #7e22ce 0%, #a855f7 50%, #c084fc 100%);
-    box-shadow: 0 0 12px rgba(192, 132, 252, 0.9);
+    background: #6b21a8;
+    box-shadow: 0 0 6px rgba(107, 33, 168, 0.4);
 }
 
 .rank-fill-emd {
-    background: linear-gradient(90deg, #b91c1c 0%, #ef4444 50%, #f87171 100%);
-    box-shadow: 0 0 12px rgba(248, 113, 113, 0.9);
+    background: #991b1b;
+    box-shadow: 0 0 6px rgba(153, 27, 27, 0.4);
 }
 
 .rank-fill-nmd {
-    background: linear-gradient(90deg, #b45309 0%, #d97706 50%, #fbbf24 100%);
-    box-shadow: 0 0 12px rgba(251, 191, 36, 0.9);
+    background: #b45309;
+    box-shadow: 0 0 6px rgba(180, 83, 9, 0.4);
 }
 
 .rank-fill-pres {
-    background: linear-gradient(90deg, #64748b 0%, #cbd5e1 50%, #ffffff 100%);
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    background: #94a3b8;
+    box-shadow: 0 0 6px rgba(148, 163, 184, 0.4);
 }
 
 .rank-fill-crown {
-    background: linear-gradient(90deg, #b85c14 0%, #d3833b 30%, #ffd700 70%, #fff1a8 100%);
-    box-shadow: 0 0 16px rgba(255, 215, 0, 0.95), 0 0 10px rgba(211, 131, 59, 0.85);
+    background: #c59b27;
+    box-shadow: 0 0 8px rgba(197, 155, 39, 0.5);
 }
 
 /* ==========================================================================
