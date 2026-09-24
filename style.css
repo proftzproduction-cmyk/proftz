@@ -16,6 +16,7 @@ html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -761,6 +762,10 @@ body {
         max-width: 320px; 
         margin: 0 auto 30px auto; 
         gap: 12px;
+    }
+    .hero-actions a {
+        width: 100%;
+        display: block;
     }
     .btn-primary, .btn-secondary { 
         width: 100%; 
@@ -4084,6 +4089,250 @@ body {
     }
     .email-heading-serif {
         font-size: 22px;
+    }
+}
+
+/* ==========================================================================
+   MOBILE MENU STYLES
+   ========================================================================== */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100dvh;
+    background-image: linear-gradient(rgba(13, 19, 21, 0.65), rgba(13, 19, 21, 0.65)), url('public/body_BG.webp');
+    background-repeat: repeat;
+    background-position: top center;
+    background-size: 100% auto;
+    background-color: #0d1315;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-inner {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Copper side borders removed for full-width mobile feel */
+
+.mobile-menu-divider {
+    height: 2px;
+    width: 100%;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, rgba(211, 131, 59, 0) 0%, rgba(255, 200, 130, 0.9) 50%, rgba(211, 131, 59, 0) 100%);
+    box-shadow: 0 0 15px rgba(211, 131, 59, 0.5);
+    position: relative;
+    z-index: 40;
+}
+
+/* Removed individual side border positioning */
+
+.close-menu-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    margin-right: -4px; /* offset inner padding */
+}
+
+.close-menu-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* Navigation List */
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 24px;
+    margin-bottom: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mobile-nav-card {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #162227 0%, #0d1518 100%) padding-box,
+                linear-gradient(135deg, rgba(106, 224, 40, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(106, 224, 40, 0.1) 100%) border-box;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    padding: 16px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 2px 10px rgba(255, 255, 255, 0.02);
+}
+
+.mobile-nav-card:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(180deg, #1a2a30 0%, #111b20 100%) padding-box,
+                linear-gradient(135deg, rgba(106, 224, 40, 0.4) 0%, rgba(106, 224, 40, 0.8) 50%, rgba(106, 224, 40, 0.4) 100%) border-box;
+    box-shadow: 0 8px 25px rgba(106, 224, 40, 0.15), inset 0 2px 10px rgba(106, 224, 40, 0.1);
+}
+
+.nav-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(106, 224, 40, 0.15), rgba(106, 224, 40, 0.02));
+    border: 1px solid rgba(106, 224, 40, 0.4);
+    box-shadow: 0 0 15px rgba(106, 224, 40, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.mobile-nav-card:hover .nav-card-icon {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(106, 224, 40, 0.4);
+    background: linear-gradient(135deg, rgba(106, 224, 40, 0.25), rgba(106, 224, 40, 0.05));
+}
+
+.nav-card-text {
+    color: #F2F4F3;
+    font-size: 17px;
+    font-weight: 700;
+    flex-grow: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-card:hover .nav-card-text {
+    color: #ffffff;
+}
+
+.nav-card-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-nav-card:hover .nav-card-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+/* Footer Actions */
+.mobile-menu-footer {
+    padding: 30px 24px;
+    background: linear-gradient(180deg, transparent 0%, rgba(8, 12, 13, 0.8) 100%);
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mobile-menu-footer a {
+    display: block;
+    width: 100%;
+}
+
+.nav-btn-join {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: #83ce27;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(131, 206, 39, 0.2);
+    box-sizing: border-box;
+}
+
+.nav-btn-join:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(131, 206, 39, 0.4);
+}
+
+.nav-btn-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: #0d1315;
+    border: 1.5px solid rgba(131, 206, 39, 0.3);
+    color: #83ce27;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-bottom: 16px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+.nav-btn-login:hover {
+    background: rgba(131, 206, 39, 0.05);
+    border-color: rgba(131, 206, 39, 0.6);
+}
+
+.nav-footer-text {
+    color: #888;
+    font-size: 13px;
+    text-align: left;
+    margin-left: 4px;
+}
+
+/* Fix width issue on mobile devices */
+.mobile-menu {
+    width: 100%;
+}
+
+/* Small mobile devices tweaks */
+@media (max-width: 480px) {
+    .mobile-nav-card {
+        padding: 14px 16px;
+    }
+    .nav-card-icon {
+        width: 36px;
+        height: 36px;
+        margin-right: 12px;
+    }
+    .nav-btn-join, .nav-btn-login {
+        padding: 14px;
     }
 }
 
