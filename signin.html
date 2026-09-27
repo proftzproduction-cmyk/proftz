@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Member Sign In - PROFTZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .signin-connect-btn {
+            background: linear-gradient(180deg, #8ce62c 0%, #68b81a 100%);
+            border: none;
+            border-radius: 14px;
+            padding: 16px 36px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #111;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(140, 230, 44, 0.15);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .signin-connect-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(140, 230, 44, 0.3);
+            background: linear-gradient(180deg, #9aff3b 0%, #75d41f 100%);
+        }
+
+        .wallet-icon-box {
+            background: #fff;
+            border-radius: 8px;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .signin-security-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #a0a5a8;
+            font-size: 13px;
+        }
+        
+        .signin-security-info svg {
+            color: #5ded37;
+        }
+    </style>
+</head>
+<body class="login-page">
+    <header class="main-header" role="banner">
+        <div class="header-inner">
+            <div class="header-left"></div>
+            <div class="header-center">
+                <a href="index.html">
+                    <img src="public/lo.webp" alt="Proftz Logo" class="logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="menu-btn" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="login-container">
+        <img src="public/design overlay.png" class="hero-design-overlay" alt="Design Overlay">
+        <video src="public/globe.mp4" class="hero-globe login-globe" autoplay loop muted playsinline webkit-playsinline preload="auto"></video>
+
+        <div class="login-wrapper">
+            <!-- Card Container matching the Connect & Register layout -->
+            <div class="login-card">
+                
+                <div class="connect-register-section" style="margin-bottom: 25px;">
+                    <div class="connect-header-row">
+                        <h1 class="connect-main-title">Member Sign In</h1>
+                        <span class="copper-accent-bar"></span>
+                    </div>
+                    <p class="connect-subtitle">Welcome back to PROFTZ</p>
+                    <p class="connect-desc">
+                        Sign in with the wallet you used at activation. Your account type &mdash; IBP or Retail Client &mdash; is recognised automatically and you land in the right back office.
+                    </p>
+                </div>
+
+                <div class="card-divider"></div>
+
+                <div class="step-panel active">
+                    <div class="step-top-header">
+                        <h2 class="step-main-heading">SECURE WALLET LOGIN</h2>
+                        <a href="login.html" class="btn-copper-stroke">Create Account &rarr;</a>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 40px; margin-bottom: 20px;">
+                        <button class="signin-connect-btn" onclick="alert('Connecting to Web3 Wallet...')">
+                            <div class="wallet-icon-box">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="6" width="20" height="13" rx="2"></rect>
+                                    <path d="M18 12h.01"></path>
+                                    <path d="M2 10h20"></path>
+                                </svg>
+                            </div>
+                            Connect Wallet
+                        </button>
+
+                        <div class="signin-security-info">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            BNB Smart Chain (BEP-20) &middot; payouts settle to your connected wallet
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>
